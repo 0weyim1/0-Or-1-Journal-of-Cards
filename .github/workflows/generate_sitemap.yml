@@ -14,53 +14,31 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Required for proper git diff checks
-
-      # Only add this if you use a static site generator (Jekyll/Hugo/etc.)
-      # - name: Build Site
-      #   run: |
-      #     echo "Add your build commands here (e.g., 'jekyll build' or 'hugo')"
+          fetch-depth: 0
 
       - name: Generate Sitemap
         run: |
-          # Create sitemap.xml with core pages
           echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
           echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
-
-          # Add homepage (always include this)
           echo '  <url><loc>https://0weyim1.github.io/0-Or-1-Journal-of-Cards/index.html</loc><priority>1.0</priority></url>' >> sitemap.xml
-
-          # Find and add all HTML files (adjust path if needed)
           find . -type f -name "*.html" \
             | grep -v -e '/node_modules/' -e '/\.git/' -e '/\.github/' -e '404.html' \
             | sort | while read -r file; do
             url="https://0weyim1.github.io/0-Or-1-Journal-of-Cards/index.html${file#./}"
             echo "  <url><loc>${url}</loc><priority>0.8</priority></url>" >> sitemap.xml
           done
-
           echo '</urlset>' >> sitemap.xml
-
-          # Debug: Show generated sitemap (visible in workflow logs)
           echo "Generated sitemap:"
           cat sitemap.xml
 
       - name: Commit and Push Sitemap
         run: |
-          # Check if file exists and has changes
-          if [ ! -f "sitemap.xml" ]; then
-            echo "Error: sitemap.xml was not generated!"
-            exit 1
-          fi
-
-          # Check if sitemap.xml has changes
-          git diff --quiet --exit-code sitemap.xml
-          if [ $? -ne 0 ]; then
-            echo "sitemap.xml has changes, committing and pushing"
-            git config --global user.name "GitHub Actions"
-            git config --global user.email "actions@github.com"
-            git add sitemap.xml
-            git commit -m "Auto-generated sitemap update [skip ci]"
-            git push
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
           else
-            echo "sitemap.xml has no changes, skipping commit and push"
+            git commit -m "Auto-generated sitemap update [skip ci]"
+            git push origin main
           fi
