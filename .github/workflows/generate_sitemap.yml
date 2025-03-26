@@ -26,7 +26,7 @@ jobs:
           # Create sitemap.xml with core pages
           echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
           echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
-          
+
           # Add homepage (always include this)
           echo '  <url><loc>https://0weyim1.github.io/0-Or-1-Journal-of-Cards/index.html</loc><priority>1.0</priority></url>' >> sitemap.xml
 
@@ -52,10 +52,15 @@ jobs:
             exit 1
           fi
 
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add sitemap.xml
-          
-          # Use --allow-empty to ensure file is created on first run
-          git commit --allow-empty -m "Auto-generated sitemap update [skip ci]"
-          git push
+          # Check if sitemap.xml has changes
+          git diff --quiet --exit-code sitemap.xml
+          if [ $? -ne 0 ]; then
+            echo "sitemap.xml has changes, committing and pushing"
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git add sitemap.xml
+            git commit -m "Auto-generated sitemap update [skip ci]"
+            git push
+          else
+            echo "sitemap.xml has no changes, skipping commit and push"
+          fi
