@@ -18,10 +18,26 @@
             color: #333;
         }
         header {
-            background-color: #1404f8;
-            color: white;
+            background-color: #1404f8; /* Assuming you want a blue header */
             text-align: center;
-            padding: 20px;
+            padding: 10px 0;
+            color: white;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+        .table-container {
+            display: flex;
+            justify-content: center;
+        }
+        table {
+            width: 90%;
+            max-width: 600px; /* Adjust for better responsiveness */
+        }
+        td {
+            text-align: center;
+            word-wrap: break-word;
         }
         header h1 {
             margin: 0;
@@ -136,7 +152,7 @@
         }
         footer a {
             color: #0011fa;
-            text-decoration: none;
+            text-decoration: underline;
         }
         footer a:hover {
             text-decoration: underline;
@@ -156,10 +172,16 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico"> 
 </head>
 <body>
-
 <header>
-    <h1>0 or 1 Journal of Cards for General Knowledge 0</h1>
-</header>
+        <div class="table-container">
+            <table border="0">
+                <tr>
+                    <td><img src="0O1JOC.png" class="logo"></td>
+                    <td><h1>0 or 1 Journal of Cards for General Knowledge 0</h1></td>
+                </tr>
+            </table>
+        </div>
+    </header>
 <div class="book">
     <section class="table-of-contents">
         <h2>Table of Contents</h2>
