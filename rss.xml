@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Your Journal Title</title>
+    <link>https://your-journal.github.io/</link>
+    <description>Your Journal Description</description>
+    <language>en-us</language>
+    <pubDate>$(date -R)</pubDate>
+    <item>
+      <title>    0 or 1 Journal of Cards for General Knowledge 0</title>
+      <link>https://your-journal.github.io/0O1JOCFGK0.html</link>
+      <description>Journal Website</description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
+      <title></title>
+      <link>https://your-journal.github.io/VOL1/Dag/volume-1-article-25.1.1.html</link>
+      <description></description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
+      <title></title>
+      <link>https://your-journal.github.io/VOL1/Dag/volume-1-article-25.1.2.html</link>
+      <description></description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
+      <title></title>
+      <link>https://your-journal.github.io/VOL1/Dag/volume-1-article-25.1.3.html</link>
+      <description></description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
+      <title></title>
+      <link>https://your-journal.github.io/VOL1/Dag/volume-1-article-25.1.4.html</link>
+      <description></description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
+      <title></title>
+      <link>https://your-journal.github.io/VOL1/Dag/volume-1-article-25.1.5.html</link>
+      <description></description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
+      <title></title>
+      <link>https://your-journal.github.io/VOL1/Dag/volume-1-article-25.1.6.html</link>
+      <description></description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
+      <title>    0 or 1 Journal of Cards</title>
+      <link>https://your-journal.github.io/index.html</link>
+      <description>Journal Website</description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
+      <title>Vol. 1 of the 0 or 1 Journal of Cards for General Knowledge 0</title>
+      <link>https://your-journal.github.io/vol1.html</link>
+      <description></description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+  </channel>
+</rss>
