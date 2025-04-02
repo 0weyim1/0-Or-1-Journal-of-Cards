@@ -21,9 +21,9 @@ jobs:
           echo '<?xml version="1.0" encoding="UTF-8"?>' > rss.xml
           echo '<rss version="2.0">' >> rss.xml
           echo '  <channel>' >> rss.xml
-          echo '    <title>Your Journal Title</title>' >> rss.xml
-          echo '    <link>https://your-journal.github.io/</link>' >> rss.xml
-          echo '    <description>Your Journal Description</description>' >> rss.xml
+          echo '    <title>0 or 1 Journal of Cards</title>' >> rss.xml
+          echo '    <link>https://0weyim1.github.io/0-Or-1-Journal-of-Cards/</link>' >> rss.xml
+          echo '    <description>The 0 or 1 Journal of Cards is an innovative and interdisciplinary open-access journal dedicated to publishing high-quality, peer-reviewed flashcards designed for playing the 0 or 1 game. This game serves as an engaging educational tool aimed at fostering learning and knowledge retention across various subject areas. The journal’s primary focus is to provide a creative platform for educators, researchers, and enthusiasts to contribute meaningful and interactive content that supports learning at all levels—from kindergarten to university.</description>' >> rss.xml
           echo '    <language>en-us</language>' >> rss.xml
           echo '    <pubDate>$(date -R)</pubDate>' >> rss.xml
 
@@ -31,7 +31,7 @@ jobs:
           find . -type f -name "*.html" \
             | grep -v -e '/node_modules/' -e '/\.git/' -e '/\.github/' -e '404.html' \
             | sort | while read -r file; do
-            url="https://your-journal.github.io/${file#./}"
+            url="https://0weyim1.github.io/0-Or-1-Journal-of-Cards/${file#./}"
             title=$(grep '<title>' "$file" | sed -E 's/<title>(.*)<\/title>/\1/')
             description=$(grep '<meta name="description" content="' "$file" | sed -E 's/.*content="([^"]*)".*/\1/')
             pubDate=$(git log -1 --format="%aR" "$file") # Get last commit date
