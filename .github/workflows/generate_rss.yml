@@ -1,0 +1,65 @@
+name: Generate RSS Feed
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+
+jobs:
+  generate-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate RSS Feed
+        run: |
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > rss.xml
+          echo '<rss version="2.0">' >> rss.xml
+          echo '  <channel>' >> rss.xml
+          echo '    <title>Your Journal Title</title>' >> rss.xml
+          echo '    <link>https://your-journal.github.io/</link>' >> rss.xml
+          echo '    <description>Your Journal Description</description>' >> rss.xml
+          echo '    <language>en-us</language>' >> rss.xml
+          echo '    <pubDate>$(date -R)</pubDate>' >> rss.xml
+
+          # Find and add blog posts (adjust path if needed)
+          find . -type f -name "*.html" \
+            | grep -v -e '/node_modules/' -e '/\.git/' -e '/\.github/' -e '404.html' \
+            | sort | while read -r file; do
+            url="https://your-journal.github.io/${file#./}"
+            title=$(grep '<title>' "$file" | sed -E 's/<title>(.*)<\/title>/\1/')
+            description=$(grep '<meta name="description" content="' "$file" | sed -E 's/.*content="([^"]*)".*/\1/')
+            pubDate=$(git log -1 --format="%aR" "$file") # Get last commit date
+
+            echo '    <item>' >> rss.xml
+            echo "      <title>${title}</title>" >> rss.xml
+            echo "      <link>${url}</link>" >> rss.xml
+            echo "      <description>${description}</description>" >> rss.xml
+            echo "      <pubDate>${pubDate}</pubDate>" >> rss.xml
+            echo '      <guid>${url}</guid>' >> rss.xml
+            echo '    </item>' >> rss.xml
+          done
+
+          echo '  </channel>' >> rss.xml
+          echo '</rss>' >> rss.xml
+
+          # Debug: Show generated RSS feed
+          echo "Generated RSS Feed:"
+          cat rss.xml
+
+      - name: Commit and Push RSS Feed
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add rss.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto-generated RSS feed update [skip ci]"
+            git push origin main
+          fi
