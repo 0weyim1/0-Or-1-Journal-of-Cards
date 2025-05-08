@@ -56,6 +56,13 @@
       <guid>${url}</guid>
     </item>
     <item>
+      <title></title>
+      <link>https://0weyim1.github.io/0-Or-1-Journal-of-Cards/VOL1/Dag/volume-1-book-25.1.1.html</link>
+      <description></description>
+      <pubDate>%aR</pubDate>
+      <guid>${url}</guid>
+    </item>
+    <item>
       <title>    0 or 1 Journal of Cards</title>
       <link>https://0weyim1.github.io/0-Or-1-Journal-of-Cards/index.html</link>
       <description>Journal Website</description>
