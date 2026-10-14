@@ -1,0 +1,727 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1in,left=1in,includefoot]{geometry}
+\usepackage[margin=1in,left=1in,includefoot]{geometry}
+\usepackage{multicol}
+\usepackage[tbtags]{amsmath}%%%%%https://tex.stackexchange.com/questions/368353/using-equation-split-how-can-i-ensure-that-only-the-last-equation-is-numbered%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+ \usepackage{amsmath}
+ \usepackage{amsfonts}
+ \usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\everymath{\displaystyle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}%%palatino font for text
+\usepackage[euler-digits,euler-hat-accent]{eulervm}%euler for math font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ragged2e}%%%%%%%%%%%%%%for \justify
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xcolor}
+\usepackage{booktabs,tabularx}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{graphicx} % Required for including images
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks=true]{hyperref}%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mystyle}%                % Name
+  {}%                                     % Space above
+  {}%                                     % Space below
+  {\itshape}%                             % Body font
+  {}%                                     % Indent amount
+  {\bfseries}%                            % Theorem head font
+  {.}%                                    % Punctuation after theorem head
+  { }%                                    % Space after theorem head, ' ', or \newline
+  {}%                                     % Theorem head spec (can be left empty, meaning `normal')
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{solution}{Solution}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
+\numberwithin{theorem}{section}
+\numberwithin{proposition}{section}
+\numberwithin{example}{section}
+\numberwithin{remark}{section}
+\numberwithin{lemma}{section}
+\numberwithin{corollary}{section}
+\numberwithin{definition}{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[shortlabels]{enumitem}
+\usepackage{soul}%%for highlighting texts and equations begin inside $$..\hl{some text here}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}%%to highlight math equations which is inside \begin{equation}...\end{equation}
+\usepackage{authblk}
+\title{\large Engineering Applied Mathematics IIB for Two Players with Six Number of Jester Cards on Differential Calculus of Function of Several Variables}
+
+\author[$~$]{\small Dagnachew Jenber}
+%\author[3,$*$]{Habtu Zegeye}
+%\author[1]{Mollalgn Haile Takele}
+%\author[4]{Abebe Regassa Tufa}
+% \affil[1]{ Department of Mathematics, Bahir Dar University, Bahir Dar, Ethiopia.}
+\affil[$~$]{Department of Mathematics, Addis Ababa Science and Technology University, Addis Ababa, Ethiopia.}
+%\affil[3]{Department of Mathematics, Botswana International University of Science and Technology, Private Bag 16, Palapye, Botswana.}
+%\affil[4]{Department of Mathematics, University of Botswana, Private Bag 00704 Gaborone, Botswana.}
+% \affil[$*$]{Corresponding author: Dagnachew Jenber, dagnachew.Jenber@aastu.edu.et}
+%\date{}                     %% if you don't need date to appear
+\setcounter{Maxaffil}{0}
+\renewcommand\Affilfont{\itshape\small}
+\usepackage{xhfill}
+\setlength{\parindent}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=bibtex,maxnames=1000,minnames=10,maxalphanames=1000,
+minalphanames=10,style=numeric,sorting=anyt,firstinits=true]{biblatex}
+\DeclareNameAlias{default}{last-first}
+\addbibresource{volume-1-article-26.1.1.bib}
+\renewbibmacro{in:}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[tbtags]{amsmath}%%%%%https://tex.stackexchange.com/questions/368353/using-equation-split-how-can-i-ensure-that-only-the-last-equation-is-numbered%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\makeatletter         
+\def\@maketitle{
+\raggedright
+\begin{center}
+{\large \bfseries \sffamily \@title }\\[1.5ex]
+{  \@author}\\[8ex]
+\end{center}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+\makeatletter
+\renewcommand\tableofcontents{%
+  \null\hfill\textbf{\Large\contentsname}\hfill\null\par
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \@starttoc{toc}%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\fontfamily{kpfonts}
+\hypersetup{
+  colorlinks,
+  citecolor=red,
+  linkcolor=red,
+  urlcolor=blue}
+
+  \hypersetup{
+  citebordercolor=red,
+  filebordercolor=red,
+  linkbordercolor=blue
+}
+\centering
+{\bf Abstract}
+\justify
+This work presents 16 number of cards from applied mathematics IIB degree level mainly focused on differential calculus of function of several variables.   The jester cards are \begin{enumerate}[label=\Alph*.]
+  \item Functions of several variables, graphs, and
+  level curves.
+  \item Limits and continuity.
+  \item Partial and higher-order derivatives.
+  \item Directional derivatives and gradients.
+  \item Total differentials, tangent planes, and
+  the chain rule.
+  \item Relative and absolute extrema, including
+  Lagrange multipliers.
+\end{enumerate}
+%\justify
+\renewcommand{\thefootnote}{}%remove numbering for the footnote
+\footnotetext{\scriptsize \textcopyright\ The Author(s) 2025. Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives
+4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modiﬁed the licensed material. You do not have permission under this licence to share adapted material derived
+from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder. To view a copy of this licence, visit \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}.}
+\renewcommand{\thefootnote}{\arabic{footnote}}%%restore default numbering for future footnotes
+\section{Introduction}
+\label{S:2}
+At present, the decline in the reading community has reached a worrisome level. For many reasons, people have stopped sitting down and reading. For instance, wasting time on useless social media and in trivial places are among the many minor reasons. In 2025, Jenber proposed a solution to this through a major share company established under the title "Zero or One Trading Share Company." This share company believes that the problem mentioned above can be solved in the following ways. We found the solution included in this writing to be convincing (for more information, see the foundation document of 0 or 1 game \cite{ZOOTSC}). The solution presented by this share company is briefly summarized below:
+\begin{enumerate}\item[(1)] Making reading or studying entertaining, profitable, and rewarding. One of the methods for studying or acquiring new knowledge is understanding things by associating them with their equivalents. For example, an English word has many synonyms. Trying to memorize them by associating them is considered one of the best methods. However, to make this exercise unforgettable, doing it in the form of a game while having fun and discussing in groups makes it preferable.There are scientific studies conducted around studying English vocabulary by preparing cards (for example, see \cite{aslan2011teaching,azabdaftari2012comparing,bryson2012using,kosim2013improving,nikoopour2014vocabulary,nugroho2012improving,saputri2017improving,senzaki2017reinventing,sitompul2013teaching,wahyuni2014flashcards}).
+\item[(2)] Understanding things by associating them according to their types stimulates thinking, makes one inquisitive, sparks discussions with friends, and even drives one to search for reference books. And when done this way, it takes a much longer time to forget that thing.
+\item[(3)] Furthermore, if this association is done enjoyably in the form of a game with friends, and if a bonus/reward is given to the winner to encourage knowledge and learning, the game will become popular.
+\item[(4)] Developing various types of entertaining games to execute the solutions mentioned in 1-3 above.
+\end{enumerate}
+In this paper, we have prepared cards for the 0 or 1 game. We have briefly described the number of cards we prepared as follows. Let the number of jester cards be $6$ and the number of players be $k = 2$. Therefore, the total number of cards, $n = 8 \times 2 + 6 = 22$. Thus, including the jester cards, there are a total of $22$ cards. The player cards will be $22 - 6 = 16$ cards; $16$ is a multiple of $8$ (for more information, see the 0 or 1 game foundation document). The jester cards are as follows: \begin{enumerate}[label=\Alph*.]
+  \item Functions of several variables, graphs, and
+  level curves.
+  \item Limits and continuity.
+  \item Partial and higher-order derivatives.
+  \item Directional derivatives and gradients.
+  \item Total differentials, tangent planes, and
+  the chain rule.
+  \item Relative and absolute extrema, including
+  Lagrange multipliers.
+\end{enumerate}
+\section{Preliminary}
+\label{S:2}
+Differential calculus of functions of several variables
+is an essential mathematical tool in engineering.
+Many engineering quantities depend on more than one
+independent variable. For example, temperature may
+depend on spatial coordinates, voltage may vary with
+position, and the performance of an engineering system
+may depend on several design parameters.
+
+This chapter introduces the principal concepts of
+multivariable differential calculus, including functions
+of several variables, limits and continuity, partial
+derivatives, gradients, directional derivatives, total
+differentials, tangent planes, the chain rule, and
+optimization. These concepts provide mathematical
+tools for modelling, analyzing, and optimizing
+engineering systems \cite{openstax2022}.
+
+\subsection{Definitions and Mathematical Examples}
+
+\subsubsection{Functions of Several Variables}
+
+A function of several variables assigns a unique real
+number to each point in its domain. A function of two
+variables can be written as
+\[
+f:D\subseteq\mathbb{R}^2\longrightarrow\mathbb{R},
+\qquad f(x,y)=z.
+\]
+
+For example, consider
+\[
+f(x,y)=x^2+3xy+y^2.
+\]
+At the point $(1,2)$,
+\[
+f(1,2)=1+3(1)(2)+4=11.
+\]
+
+The graph of a function of two variables is generally
+a surface in three-dimensional space. Level curves
+are obtained by setting $f(x,y)=c$, where $c$ is
+a constant. These representations are useful for
+studying temperature distributions, voltage fields,
+and engineering performance functions
+\cite{openstax2022}.
+
+\subsubsection{Limits and Continuity}
+
+The limit of a function $f(x,y)$ as $(x,y)$ approaches
+$(a,b)$ describes the value approached by the function
+as the point $(x,y)$ approaches $(a,b)$.
+
+For example,
+\[
+\lim_{(x,y)\to(1,2)}(x^2+y^2)=5.
+\]
+
+A function is continuous at $(a,b)$ if
+\[
+\lim_{(x,y)\to(a,b)}f(x,y)=f(a,b),
+\]
+where the limit and function value exist.
+
+For a multivariable limit to exist, the function must
+approach the same value along every admissible path
+toward the point \cite{openstaxlimits}.
+
+\subsubsection{Partial Derivatives}
+
+A partial derivative measures the instantaneous rate
+of change of a function with respect to one variable,
+while the other variables are held constant.
+
+For example, let
+\[
+f(x,y)=x^2y+3xy^2.
+\]
+Then
+\[
+\frac{\partial f}{\partial x}=2xy+3y^2,
+\]
+and
+\[
+\frac{\partial f}{\partial y}=x^2+6xy.
+\]
+
+Partial derivatives are used to investigate how
+changes in individual engineering variables affect
+the output of a system \cite{openstaxpartials}.
+
+\subsubsection{Higher-Order Partial Derivatives}
+
+Higher-order partial derivatives are obtained by
+differentiating partial derivatives again. For a
+sufficiently smooth function, the mixed partial
+derivatives satisfy
+\[
+f_{xy}=f_{yx}.
+\]
+
+For example, if
+\[
+f(x,y)=x^2y^3,
+\]
+then
+\[
+f_x=2xy^3,\qquad f_y=3x^2y^2,
+\]
+and consequently
+\[
+f_{xy}=6xy^2,\qquad f_{yx}=6xy^2.
+\]
+
+Second-order partial derivatives are also important
+in classifying critical points of functions
+\cite{openstaxmaxima,openstaxpartials}.
+
+\subsubsection{Directional Derivatives and Gradients}
+
+The gradient of a differentiable function of two
+variables is defined by
+\[
+\nabla f(x,y)=
+\left\langle f_x(x,y),f_y(x,y)\right\rangle.
+\]
+
+The directional derivative in a unit direction
+$\mathbf{u}=\langle u_1,u_2\rangle$ is
+\[
+D_{\mathbf{u}}f(x,y)=\nabla f(x,y)\cdot\mathbf{u}.
+\]
+
+For example, if
+\[
+f(x,y)=x^2+y^2,
+\]
+then
+\[
+\nabla f(1,2)=\langle 2,4\rangle.
+\]
+
+The gradient points in the direction of greatest
+instantaneous increase of the function, while the
+directional derivative measures the rate of change
+in a specified unit direction \cite{openstaxgradient}.
+
+\subsubsection{Total Differentials and Linear Approximations}
+
+For a differentiable function $z=f(x,y)$, the total
+differential is
+\[
+dz=f_x(x,y)\,dx+f_y(x,y)\,dy.
+\]
+
+For small changes in $x$ and $y$, the change in the
+function can be approximated by
+\[
+\Delta z\approx f_x(a,b)\Delta x+
+f_y(a,b)\Delta y.
+\]
+
+For example, if
+\[
+f(x,y)=x^2+y^2,
+\]
+then at $(1,2)$,
+\[
+dz=2\,dx+4\,dy.
+\]
+
+This approximation is useful for estimating the
+effect of small measurement errors or design changes
+\cite{openstax2022}.
+
+\subsubsection{Tangent Planes}
+
+The tangent plane to the surface $z=f(x,y)$ at
+$(a,b,f(a,b))$ is
+\[
+\begin{aligned}
+z-f(a,b)
+={}&f_x(a,b)(x-a)\\
+ &+f_y(a,b)(y-b).
+\end{aligned}
+\]
+
+For example, consider $z=x^2+y^2$ at $(1,2,5)$.
+Since $f_x(1,2)=2$ and $f_y(1,2)=4$, the tangent
+plane is
+\[
+z-5=2(x-1)+4(y-2),
+\]
+or equivalently,
+\[
+z=2x+4y-5.
+\]
+
+Tangent planes provide local linear approximations
+of smooth surfaces \cite{openstax2022}.
+
+\subsubsection{The Chain Rule}
+
+Suppose that $z=f(x,y)$, where $x=x(t)$ and
+$y=y(t)$. The chain rule gives
+\[
+\frac{dz}{dt}
+=\frac{\partial z}{\partial x}\frac{dx}{dt}
++\frac{\partial z}{\partial y}\frac{dy}{dt}.
+\]
+
+For example, let
+\[
+z=x^2+y^2,\qquad x=t,\qquad y=2t.
+\]
+Then
+\[
+z=t^2+4t^2=5t^2,
+\]
+and hence
+\[
+\frac{dz}{dt}=10t.
+\]
+
+The chain rule is useful when engineering variables
+depend on time or on other intermediate variables
+\cite{openstaxchain}.
+
+\subsubsection{Relative and Absolute Extrema}
+
+A relative maximum or minimum describes a local
+maximum or minimum of a function. An absolute
+maximum or minimum is the greatest or smallest
+function value over the entire specified domain.
+
+For an interior critical point of a differentiable
+function, one commonly solves
+\[
+f_x(x,y)=0,\qquad f_y(x,y)=0.
+\]
+
+The second-derivative test uses the discriminant
+\[
+D=f_{xx}f_{yy}-(f_{xy})^2.
+\]
+
+At a critical point:
+\begin{itemize}
+  \item If $D>0$ and $f_{xx}>0$, there is a local minimum.
+  \item If $D>0$ and $f_{xx}<0$, there is a local maximum.
+  \item If $D<0$, the point is a saddle point.
+  \item If $D=0$, the test is inconclusive.
+\end{itemize}
+
+For example, $f(x,y)=x^2+y^2$ has a global minimum
+at $(0,0)$, where $f(0,0)=0$
+\cite{openstaxmaxima}.
+
+\subsubsection{Lagrange Multipliers}
+
+Lagrange multipliers provide a method for optimizing
+a function subject to a constraint. For an objective
+$f(x,y)$ and a constraint $g(x,y)=0$, the equations
+are
+\[
+\nabla f(x,y)=\lambda\nabla g(x,y),
+\qquad g(x,y)=0.
+\]
+
+For example, to optimize $f(x,y)=xy$ subject to
+\[
+x^2+y^2=1,
+\]
+we solve
+\[
+\langle y,x\rangle
+=\lambda\langle 2x,2y\rangle,
+\qquad x^2+y^2=1.
+\]
+
+This method is useful in constrained engineering
+design and resource allocation
+\cite{openstaxlagrange}.
+\section{Jester and Player Cards}
+\label{S:3}
+\subsection{Instructions}
+
+Each question has six fixed answer choices, labelled
+A, B, C, D, E, and F. Exactly three choices are correct
+for each question, and the other three are incorrect.
+
+During each play, a student selects one answer choice.
+A correct selection earns a score of $1$, while an
+incorrect selection earns a score of $0$.
+
+The mathematical task described in each question
+determines which three choices are correct. The same
+six answer-choice descriptions are used throughout
+the question set.
+
+\subsection{Jester Cards}
+
+\begin{enumerate}[label=\Alph*.]
+  \item Functions of several variables, graphs, and
+  level curves.
+  \item Limits and continuity.
+  \item Partial and higher-order derivatives.
+  \item Directional derivatives and gradients.
+  \item Total differentials, tangent planes, and
+  the chain rule.
+  \item Relative and absolute extrema, including
+  Lagrange multipliers.
+\end{enumerate}
+
+\subsection{Player Cards}
+
+\subsubsection*{Question 1: Temperature Distribution}
+
+An engineer models the temperature distribution
+over a metal plate by
+\[
+T(x,y)=100-x^2-2y^2.
+\]
+Choose the correct concepts from options A--F that
+are relevant to representing this temperature field,
+calculating its partial derivatives, and determining
+its directional rates of change.
+
+\subsubsection*{Question 2: Limits and Continuity}
+
+Consider
+\[
+f(x,y)=\frac{x^2-y^2}{x-y},\qquad x\ne y.
+\]
+Choose the correct concepts from options A--F that
+are relevant to representing the function, examining
+its limit near $(1,1)$, and investigating the
+existence of a continuous extension.
+
+\subsubsection*{Question 3: Partial Derivatives and
+Linearization}
+
+Given
+\[
+f(x,y)=x^3y^2+4xy,
+\]
+choose the correct concepts from options A--F that
+are relevant to representing the function, computing
+its partial derivatives, and constructing a local
+linear approximation.
+
+\subsubsection*{Question 4: Voltage Field}
+
+An electrical engineer models voltage by
+\[
+V(x,y)=x^2+xy+y^2.
+\]
+Choose the correct concepts from options A--F that
+are relevant to representing the voltage field,
+investigating its continuity, and determining
+its directional rates of change.
+
+\subsubsection*{Question 5: Gradient and Directional
+Derivatives}
+
+Given
+\[
+f(x,y)=x^2+3y^2,
+\]
+choose the correct concepts from options A--F that
+are relevant to representing the function, computing
+its partial derivatives, and finding the direction
+of its greatest rate of increase.
+
+\subsubsection*{Question 6: Total Differential}
+
+Suppose
+\[
+z=f(x,y)=x^2+y^2.
+\]
+Choose the correct concepts from options A--F that
+are relevant to calculating partial derivatives,
+determining the gradient, and estimating small
+changes in the output using the total differential.
+
+\subsubsection*{Question 7: Tangent Plane}
+
+A mechanical engineer studies the surface
+\[
+z=x^2+xy+y^2.
+\]
+Choose the correct concepts from options A--F that
+are relevant to representing the surface, calculating
+its partial derivatives, and determining the tangent
+plane at a specified point.
+
+\subsubsection*{Question 8: Time-Dependent Output}
+
+Let
+\[
+z=x^2+y^2,\qquad x=t,\qquad y=2t.
+\]
+Choose the correct concepts from options A--F that
+are relevant to computing partial derivatives,
+investigating directional rates of change, and
+using the chain rule to determine the time-dependent
+rate of change.
+
+\subsubsection*{Question 9: Critical Points}
+
+Given
+\[
+f(x,y)=x^2+y^2,
+\]
+choose the correct concepts from options A--F that
+are relevant to representing the function, calculating
+its partial derivatives, and locating and classifying
+its critical points.
+
+\subsubsection*{Question 10: Constrained Optimization}
+
+A design parameter is chosen to minimize
+\[
+f(x,y)=x^2+4y^2
+\]
+subject to the constraint
+\[
+x+y=6.
+\]
+Choose the correct concepts from options A--F that
+are relevant to representing the objective function,
+calculating the necessary derivatives, and solving
+the constrained optimization problem.
+
+\subsubsection*{Question 11: Saddle Points}
+
+For
+\[
+f(x,y)=x^2-y^2,
+\]
+choose the correct concepts from options A--F that
+are relevant to representing the function, calculating
+its second-order partial derivatives, and determining
+whether $(0,0)$ is a saddle point.
+
+\subsubsection*{Question 12: Lagrange Multipliers}
+
+A civil engineer models a performance measure by
+\[
+f(x,y)=xy
+\]
+subject to
+\[
+x^2+y^2=1.
+\]
+Choose the correct concepts from options A--F that
+are relevant to representing the objective function,
+calculating the necessary derivatives, and finding
+the constrained extrema.
+
+\subsubsection*{Question 13: Temperature Change}
+
+The temperature at a point in a solid is modeled by
+\[
+T(x,y)=x^2+2y^2.
+\]
+Choose the correct concepts from options A--F that
+are relevant to representing the temperature field,
+calculating its partial derivatives, and determining
+the rate of temperature change in a specified direction.
+
+\subsubsection*{Question 14: Time-Dependent System}
+
+A system has output
+\[
+z=xy,
+\]
+where both $x$ and $y$ depend on time. Choose the
+correct concepts from options A--F that are relevant
+to calculating partial derivatives, determining
+directional rates of change, and applying the chain
+rule to the time-dependent output.
+
+\subsubsection*{Question 15: Absolute Extrema}
+
+An engineer studies
+\[
+f(x,y)=x^2+xy+y^2
+\]
+over a specified closed and bounded design region.
+Choose the correct concepts from options A--F that
+are relevant to representing the function, calculating
+its partial derivatives, and finding the largest and
+smallest values on the specified region.
+
+\subsubsection*{Question 16: Constrained Engineering Design}
+
+An electrical engineer studies
+\[
+P(x,y)=x^2+2xy+y^2
+\]
+subject to
+\[
+g(x,y)=x+y-4=0.
+\]
+Choose the correct concepts from options A--F that
+are relevant to representing the objective and
+constraint, calculating derivatives, and investigating
+constrained extrema.
+
+\subsubsection*{Answer Key}
+
+The following table identifies the three intended
+correct concept choices for each question.
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+\textbf{Question} & \textbf{Correct choices}\\
+\midrule
+1  & A, C, D\\
+2  & A, B, C\\
+3  & A, C, E\\
+4  & A, B, D\\
+5  & A, C, D\\
+6  & C, D, E\\
+7  & A, C, E\\
+8  & C, D, E\\
+9  & A, C, F\\
+10 & A, C, F\\
+11 & A, C, F\\
+12 & A, C, F\\
+13 & A, C, D\\
+14 & C, D, E\\
+15 & A, C, F\\
+16 & A, C, F\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+\textbf{Scoring rule:}
+\[
+\text{Score}=
+\begin{cases}
+1, & \text{if the selected choice is correct},\\
+0, & \text{if the selected choice is incorrect}.
+\end{cases}
+\]
+
+\printbibliography
+\end{document}
