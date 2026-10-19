@@ -1,0 +1,696 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1in,left=1in,includefoot]{geometry}
+\usepackage[margin=1in,left=1in,includefoot]{geometry}
+\usepackage{multicol}
+\usepackage[tbtags]{amsmath}%%%%%https://tex.stackexchange.com/questions/368353/using-equation-split-how-can-i-ensure-that-only-the-last-equation-is-numbered%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+ \usepackage{amsmath}
+ \usepackage{amsfonts}
+ \usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\everymath{\displaystyle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}%%palatino font for text
+\usepackage[euler-digits,euler-hat-accent]{eulervm}%euler for math font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ragged2e}%%%%%%%%%%%%%%for \justify
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xcolor}
+\usepackage{booktabs,tabularx}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{graphicx} % Required for including images
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks=true]{hyperref}%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mystyle}%                % Name
+  {}%                                     % Space above
+  {}%                                     % Space below
+  {\itshape}%                             % Body font
+  {}%                                     % Indent amount
+  {\bfseries}%                            % Theorem head font
+  {.}%                                    % Punctuation after theorem head
+  { }%                                    % Space after theorem head, ' ', or \newline
+  {}%                                     % Theorem head spec (can be left empty, meaning `normal')
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{solution}{Solution}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
+\numberwithin{theorem}{section}
+\numberwithin{proposition}{section}
+\numberwithin{example}{section}
+\numberwithin{remark}{section}
+\numberwithin{lemma}{section}
+\numberwithin{corollary}{section}
+\numberwithin{definition}{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[shortlabels]{enumitem}
+\usepackage{soul}%%for highlighting texts and equations begin inside $$..\hl{some text here}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}%%to highlight math equations which is inside \begin{equation}...\end{equation}
+\usepackage{authblk}
+\title{
+{\large Engineering Applied Mathematics IIB for Two Players with Six Number of Jester Cards on Differential Calculus of Function of Several Variables--Level 2}
+}
+\author[$~$]{\small Dagnachew Jenber}
+%\author[3,$*$]{Habtu Zegeye}
+%\author[1]{Mollalgn Haile Takele}
+%\author[4]{Abebe Regassa Tufa}
+% \affil[1]{ Department of Mathematics, Bahir Dar University, Bahir Dar, Ethiopia.}
+\affil[$~$]{Department of Mathematics, Addis Ababa Science and Technology University, Addis Ababa, Ethiopia.}
+%\affil[3]{Department of Mathematics, Botswana International University of Science and Technology, Private Bag 16, Palapye, Botswana.}
+%\affil[4]{Department of Mathematics, University of Botswana, Private Bag 00704 Gaborone, Botswana.}
+% \affil[$*$]{Corresponding author: Dagnachew Jenber, dagnachew.Jenber@aastu.edu.et}
+%\date{}                     %% if you don't need date to appear
+\setcounter{Maxaffil}{0}
+\renewcommand\Affilfont{\itshape\small}
+\usepackage{xhfill}
+\setlength{\parindent}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=bibtex,maxnames=1000,minnames=10,maxalphanames=1000,
+minalphanames=10,style=numeric,sorting=anyt,firstinits=true]{biblatex}
+\DeclareNameAlias{default}{last-first}
+\addbibresource{volume-1-article-26.1.2.bib}
+\renewbibmacro{in:}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[tbtags]{amsmath}%%%%%https://tex.stackexchange.com/questions/368353/using-equation-split-how-can-i-ensure-that-only-the-last-equation-is-numbered%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\makeatletter         
+\def\@maketitle{
+\raggedright
+%\setlength{\columnseprule}{-10cm} % Adds a vertical rule between columns
+\begin{multicols}{2}
+\vfill\null\columnbreak
+0 or 1 Journal of Cards for Engineering Applied Mathematics IIB\\
+Volume 1(2026), Issue 1, pages 1-12
+\end{multicols}
+\begin{center}
+{\large \bfseries \sffamily \@title }\\[1.5ex]
+{  \@author}\\[8ex]
+\end{center}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+\makeatletter
+\renewcommand\tableofcontents{%
+  \null\hfill\textbf{\Large\contentsname}\hfill\null\par
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \@starttoc{toc}%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\fontfamily{kpfonts}
+\hypersetup{
+  colorlinks,
+  citecolor=red,
+  linkcolor=red,
+  urlcolor=blue}
+
+  \hypersetup{
+  citebordercolor=red,
+  filebordercolor=red,
+  linkbordercolor=blue
+}
+\centering
+{\bf Abstract}
+\justify
+This work presents 16 number of cards from applied mathematics IIB degree level mainly focused on differential calculus of function of several variables.   The jester cards are A, B, C, D, E and F.
+%\justify
+\renewcommand{\thefootnote}{}%remove numbering for the footnote
+\footnotetext{\scriptsize \textcopyright\ The Author(s) 2025. Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives
+4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modiﬁed the licensed material. You do not have permission under this licence to share adapted material derived
+from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder. To view a copy of this licence, visit \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}.}
+\renewcommand{\thefootnote}{\arabic{footnote}}%%restore default numbering for future footnotes
+
+
+\section{Introduction}
+\label{S:2}
+At present, the decline in the reading community has reached a worrisome level. For many reasons, people have stopped sitting down and reading. For instance, wasting time on useless social media and in trivial places are among the many minor reasons. In 2025, Jenber proposed a solution to this through a major share company established under the title "Zero or One Trading Share Company." This share company believes that the problem mentioned above can be solved in the following ways. We found the solution included in this writing to be convincing (for more information, see the foundation document of 0 or 1 game \cite{ZOOTSC}). The solution presented by this share company is briefly summarized below:
+\begin{enumerate}\item[(1)] Making reading or studying entertaining, profitable, and rewarding. One of the methods for studying or acquiring new knowledge is understanding things by associating them with their equivalents. For example, an English word has many synonyms. Trying to memorize them by associating them is considered one of the best methods. However, to make this exercise unforgettable, doing it in the form of a game while having fun and discussing in groups makes it preferable.There are scientific studies conducted around studying English vocabulary by preparing cards (for example, see \cite{aslan2011teaching,azabdaftari2012comparing,bryson2012using,kosim2013improving,nikoopour2014vocabulary,nugroho2012improving,saputri2017improving,senzaki2017reinventing,sitompul2013teaching,wahyuni2014flashcards}).
+\item[(2)] Understanding things by associating them according to their types stimulates thinking, makes one inquisitive, sparks discussions with friends, and even drives one to search for reference books. And when done this way, it takes a much longer time to forget that thing.
+\item[(3)] Furthermore, if this association is done enjoyably in the form of a game with friends, and if a bonus/reward is given to the winner to encourage knowledge and learning, the game will become popular.
+\item[(4)] Developing various types of entertaining games to execute the solutions mentioned in 1-3 above.
+\end{enumerate}
+In this paper, we have prepared cards for the 0 or 1 game. We have briefly described the number of cards we prepared as follows. Let the number of jester cards be $6$ and the number of players be $k = 2$. Therefore, the total number of cards, $n = 8 \times 2 + 6 = 22$. Thus, including the jester cards, there are a total of $22$ cards. The player cards will be $22 - 6 = 16$ cards; $16$ is a multiple of $8$ (for more information, see the 0 or 1 game foundation document). The jester cards are A, B, C, D, E and F.
+\section{Preliminary}
+\label{S:2}
+Many engineering systems depend on more than one independent
+variable. For example, temperature may depend on spatial coordinates,
+electric potential may vary with position, and mechanical stress may
+depend on several geometric and physical parameters. Differential
+calculus of functions of several variables provides mathematical tools
+for describing and analyzing such systems.
+
+This chapter introduces multivariable functions, limits and continuity,
+partial derivatives, higher-order derivatives, gradients, directional
+derivatives, total differentials, tangent planes, the chain rule,
+implicit differentiation, local extrema, and constrained optimization.
+These topics are fundamental to engineering applications
+\cite{openstax2016}.
+
+\subsection{Functions of Several Variables}
+
+A function of two variables is a rule
+\[
+f:D\subseteq\mathbb{R}^{2}\longrightarrow\mathbb{R}
+\]
+that assigns a unique real number \(f(x,y)\) to each point
+\((x,y)\in D\). Its graph is generally a surface in three-dimensional
+space. A level curve is a curve defined by
+\[
+f(x,y)=c,
+\]
+where \(c\) is a constant \cite{openstax2016}.
+
+\textbf{Example.} Let
+\[
+f(x,y)=2x-y^{2}.
+\]
+At the point \((3,2)\),
+\[
+f(3,2)=2(3)-2^{2}=6-4=2.
+\]
+The level curve corresponding to \(c=4\) is
+\[
+2x-y^{2}=4.
+\]
+
+\subsection{Limits and Continuity}
+
+The limit of \(f(x,y)\) as \((x,y)\) approaches \((a,b)\) is \(L\) if
+\(f(x,y)\) approaches \(L\) as \((x,y)\) approaches \((a,b)\) through
+all possible paths in the domain. The function is continuous at
+\((a,b)\) if
+\[
+\lim_{(x,y)\to(a,b)}f(x,y)=f(a,b).
+\]
+Limits and continuity are discussed in \cite{openstaxlimits}.
+
+\textbf{Example.} Consider
+\[
+f(x,y)=x^{2}+2y^{2}.
+\]
+Since this is a polynomial, it is continuous everywhere. Therefore,
+\[
+\lim_{(x,y)\to(1,-1)}(x^{2}+2y^{2})
+=1^{2}+2(-1)^{2}=3.
+\]
+
+\subsection{Partial Derivatives}
+
+The partial derivative with respect to one variable measures the
+instantaneous rate of change with respect to that variable while the
+other variables are held constant. For a function \(f(x,y)\), the
+first-order partial derivatives are
+\[
+f_x(x,y)=\frac{\partial f}{\partial x},
+\qquad
+f_y(x,y)=\frac{\partial f}{\partial y}.
+\]
+
+\textbf{Example.} If
+\[
+f(x,y)=3x^{2}y+2y^{3},
+\]
+then
+\[
+f_x(x,y)=6xy,\qquad
+f_y(x,y)=3x^{2}+6y^{2}.
+\]
+
+\subsection{Higher-Order Partial Derivatives}
+
+Higher-order partial derivatives are obtained by differentiating
+partial derivatives again. For example,
+\[
+f_{xx}=\frac{\partial^{2}f}{\partial x^{2}},
+\quad
+f_{yy}=\frac{\partial^{2}f}{\partial y^{2}},
+\quad
+f_{xy}=\frac{\partial^{2}f}{\partial y\,\partial x}.
+\]
+If the relevant second partial derivatives are continuous in a
+neighborhood, then the mixed partial derivatives are equal:
+\[
+f_{xy}=f_{yx}.
+\]
+
+\textbf{Example.} Let
+\[
+f(x,y)=x^{3}y^{2}.
+\]
+Then
+\[
+f_x=3x^{2}y^{2},
+\qquad
+f_{xy}=6x^{2}y,
+\]
+and
+\[
+f_y=2x^{3}y,
+\qquad
+f_{yx}=6x^{2}y.
+\]
+Hence \(f_{xy}=f_{yx}\).
+
+\subsection{Gradient and Directional Derivative}
+
+The gradient of a differentiable function \(f:\mathbb{R}^{2}\to
+\mathbb{R}\) is the vector
+\[
+\nabla f(x,y)=
+\left\langle f_x(x,y),f_y(x,y)\right\rangle.
+\]
+For a unit vector \(\mathbf{u}=\langle u_1,u_2\rangle\), the
+directional derivative is
+\[
+D_{\mathbf{u}}f(x,y)=\nabla f(x,y)\cdot\mathbf{u}.
+\]
+The gradient points in the direction of the greatest local increase
+of a differentiable function \cite{openstaxgradient}.
+
+\textbf{Example.} Let
+\[
+f(x,y)=x^{2}+xy.
+\]
+Then
+\[
+\nabla f(x,y)=\langle 2x+y,x\rangle.
+\]
+At \((1,2)\),
+\[
+\nabla f(1,2)=\langle 4,1\rangle.
+\]
+
+\subsection{Total Differential and Linear Approximation}
+
+For a differentiable function \(z=f(x,y)\), the total differential is
+\[
+dz=f_x(x,y)\,dx+f_y(x,y)\,dy.
+\]
+For sufficiently small changes \(dx\) and \(dy\), the change in the
+function can be approximated by
+\[
+\Delta z\approx dz.
+\]
+
+\textbf{Example.} If
+\[
+f(x,y)=x^{2}+3y,
+\]
+then
+\[
+dz=2x\,dx+3\,dy.
+\]
+At \((2,1)\), this becomes
+\[
+dz=4\,dx+3\,dy.
+\]
+
+\subsection{Tangent Plane}
+
+For a differentiable surface \(z=f(x,y)\), the tangent plane at
+\((a,b,f(a,b))\) is given by
+\[
+z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b).
+\]
+
+\textbf{Example.} Consider \(z=x^{2}+y^{2}\) at \((2,1,5)\).
+Since \(f_x=2x\) and \(f_y=2y\), the tangent plane is
+\[
+z=5+4(x-2)+2(y-1),
+\]
+or equivalently,
+\[
+z=4x+2y-5.
+\]
+
+\subsection{Chain Rule}
+
+Suppose \(z=f(x,y)\), where \(x=x(t)\) and \(y=y(t)\). If the
+functions are differentiable, the chain rule gives
+\[
+\frac{dz}{dt}
+=f_x\frac{dx}{dt}+f_y\frac{dy}{dt}.
+\]
+
+\textbf{Example.} Let
+\[
+z=x^{2}+3y,\qquad x=2t,\qquad y=t^{2}.
+\]
+Substitution gives
+\[
+z=(2t)^{2}+3t^{2}=7t^{2}.
+\]
+Thus,
+\[
+\frac{dz}{dt}=14t.
+\]
+
+\subsection{Implicit Differentiation}
+
+When variables are related by an equation \(F(x,y,z)=0\), one can
+differentiate implicitly to find derivatives without first solving
+explicitly for one variable. If \(F_z\ne0\), then
+\[
+\frac{\partial z}{\partial x}=-\frac{F_x}{F_z}.
+\]
+
+\textbf{Example.} Suppose
+\[
+x^{2}+y^{2}+z^{2}=25.
+\]
+Differentiating with respect to \(x\), while holding \(y\) constant,
+gives
+\[
+2x+2z\frac{\partial z}{\partial x}=0.
+\]
+Therefore, when \(z\ne0\),
+\[
+\frac{\partial z}{\partial x}=-\frac{x}{z}.
+\]
+
+\subsection{Critical Points and Local Extrema}
+
+An interior critical point of a differentiable function \(f(x,y)\)
+is a point where
+\[
+f_x(x,y)=0,\qquad f_y(x,y)=0.
+\]
+For a twice-differentiable function, define
+\[
+D=f_{xx}f_{yy}-(f_{xy})^{2}.
+\]
+At a critical point:
+\begin{itemize}
+    \item If \(D>0\) and \(f_{xx}>0\), there is a strict local minimum.
+    \item If \(D>0\) and \(f_{xx}<0\), there is a strict local maximum.
+    \item If \(D<0\), the point is a saddle point.
+    \item If \(D=0\), the test is inconclusive.
+\end{itemize}
+This test is described in \cite{openstax2016}.
+
+\textbf{Example.} Let
+\[
+f(x,y)=x^{2}+4y^{2}.
+\]
+Since
+\[
+f_x=2x,\qquad f_y=8y,
+\]
+the only critical point is \((0,0)\). Also,
+\[
+D=(2)(8)-0^{2}=16>0,\qquad f_{xx}=2>0.
+\]
+Thus, \((0,0)\) is a strict local minimum. It is also an absolute
+minimum because \(f(x,y)\ge0\) for all \((x,y)\).
+
+\subsection{Lagrange Multipliers}
+
+Lagrange multipliers are used to optimize a differentiable objective
+function \(f(x,y)\) subject to a differentiable constraint
+\(g(x,y)=c\). At a regular constrained optimum, one solves
+\[
+\nabla f(x,y)=\lambda\nabla g(x,y),
+\qquad g(x,y)=c,
+\]
+where \(\lambda\) is a scalar multiplier.
+
+\textbf{Example.} Maximize \(f(x,y)=x+y\) subject to
+\[
+x^{2}+y^{2}=2.
+\]
+The Lagrange equations are
+\[
+1=2\lambda x,\qquad 1=2\lambda y,
+\qquad x^{2}+y^{2}=2.
+\]
+They give \(x=y=1\) or \(x=y=-1\). Hence the maximum is
+\[
+f(1,1)=2.
+\]
+
+\section{Jester and Player Cards}
+\label{S:3}
+\subsection{Instructions}
+
+Each question has six answer choices, labelled
+A, B, C, D, E, and F. Exactly one choice is correct
+for each question, and the other five are incorrect.
+
+During each play, a student selects one answer choice.
+A correct selection earns a score of $1$, while an
+incorrect selection earns a score of $0$.
+
+
+\subsection{Jester Cards}
+
+The jester cards contain the texts A, B, C, D, E and F.
+
+\subsection{Player Cards}
+
+\begin{enumerate}[label=\textbf{Question \arabic*.}, leftmargin=*]
+
+\item Let \(f(x,y)=2x^{2}-y\). What is \(f(1,3)\)?
+\begin{enumerate}[label=(\Alph*)]
+\item \(-1\)
+\item \(1\)
+\item \(5\)
+\item \(-5\)
+\item \(3\)
+\item \(2\)
+\end{enumerate}
+
+\item The level curve \(f(x,y)=4\) for \(f(x,y)=x^{2}+4y^{2}\) is:
+\begin{enumerate}[label=(\Alph*)]
+\item \(x^{2}+y^{2}=4\)
+\item \(x^{2}+4y^{2}=1\)
+\item \(x^{2}+4y^{2}=4\)
+\item \(x+4y=4\)
+\item \(x^{2}-4y^{2}=4\)
+\item \(4x^{2}+y^{2}=4\)
+\end{enumerate}
+
+\item Evaluate
+\[
+\lim_{(x,y)\to(2,1)}(x^{2}y+y).
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item \(3\)
+\item \(4\)
+\item \(6\)
+\item \(5\)
+\item \(7\)
+\item \(8\)
+\end{enumerate}
+
+\item Let
+\[
+f(x,y)=\frac{x+2y}{x^{2}+y^{2}}.
+\]
+What is \(f(1,1)\), and is the function continuous at \((1,1)\)?
+\begin{enumerate}[label=(\Alph*)]
+\item \(3\), and it is continuous
+\item \(1\), and it is continuous
+\item \(\frac{3}{2}\), and it is continuous
+\item \(\frac12\), and it is discontinuous
+\item \(2\), and it is discontinuous
+\item It is undefined
+\end{enumerate}
+
+\item If \(f(x,y)=xy^{3}+2x^{2}\), find \(f_x(2,3)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(4\)
+\item \(6\)
+\item \(8\)
+\item \(10\)
+\item \(35\)
+\item \(14\)
+\end{enumerate}
+
+\item If \(f(x,y)=xy^{3}+2x^{2}\), find \(f_y(1,2)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(4\)
+\item \(6\)
+\item \(8\)
+\item \(10\)
+\item \(16\)
+\item \(12\)
+\end{enumerate}
+
+\item Let \(f(x,y)=x^{4}y+2y^{3}\). Calculate \(f_{xy}(1,2)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(2\)
+\item \(4\)
+\item \(6\)
+\item \(8\)
+\item \(12\)
+\item \(16\)
+\end{enumerate}
+
+\item Let \(f(x,y)=3x^{2}+xy+2y^{2}\). Find \(\nabla f(1,2)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(\langle 6,8\rangle\)
+\item \(\langle 8,9\rangle\)
+\item \(\langle 7,9\rangle\)
+\item \(\langle 8,8\rangle\)
+\item \(\langle 9,8\rangle\)
+\item \(\langle 6,9\rangle\)
+\end{enumerate}
+
+\item For \(f(x,y)=x^{2}+y^{2}\), find the directional derivative at
+\((1,2)\) in the direction of the unit vector
+\(\mathbf{u}=\langle 3/5,4/5\rangle\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(\frac{18}{5}\)
+\item \(\frac{16}{5}\)
+\item \(\frac{22}{5}\)
+\item \(\frac{24}{5}\)
+\item \(4\)
+\item \(5\)
+\end{enumerate}
+
+\item Let \(f(x,y)=\ln x+y^{2}\). Use the total differential to estimate
+the change in \(f\) at \((1,2)\) when \(dx=0.02\) and \(dy=-0.01\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(0.06\)
+\item \(0.02\)
+\item \(-0.06\)
+\item \(-0.02\)
+\item \(0.04\)
+\item \(-0.04\)
+\end{enumerate}
+
+\item Find the tangent plane to \(z=x^{2}+xy\) at \((1,1,2)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(z=2x+y-1\)
+\item \(z=3x+y-2\)
+\item \(z=3x+y+2\)
+\item \(z=x+3y-2\)
+\item \(z=3x+2y-3\)
+\item \(z=2x+3y-3\)
+\end{enumerate}
+
+\item Suppose \(z=x^{2}y\), where \(x=t+1\) and \(y=t^{2}\).
+Find \(\dfrac{dz}{dt}\) at \(t=1\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(4\)
+\item \(8\)
+\item \(10\)
+\item \(12\)
+\item \(14\)
+\item \(16\)
+\end{enumerate}
+
+\item If \(x^{2}+y^{2}+z=12\), find
+\(\dfrac{\partial z}{\partial x}\) at \((x,y)=(2,1)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(-2\)
+\item \(2\)
+\item \(-1\)
+\item \(4\)
+\item \(-4\)
+\item \(0\)
+\end{enumerate}
+
+\item Find the critical point of
+\[
+f(x,y)=x^{2}+4x+y^{2}-6y.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item \((2,-3)\)
+\item \((-2,3)\)
+\item \((-4,6)\)
+\item \((2,3)\)
+\item \((-2,-3)\)
+\item \((0,0)\)
+\end{enumerate}
+
+\item Classify the critical point \((0,0)\) of
+\[
+f(x,y)=x^{2}-4y^{2}.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item Strict local minimum
+\item Strict local maximum
+\item Absolute minimum
+\item Absolute maximum
+\item Saddle point
+\item Not a critical point
+\end{enumerate}
+
+\item Find the maximum value of \(f(x,y)=xy\) subject to
+\(x+y=10\), where \(x,y\in\mathbb{R}\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(10\)
+\item \(20\)
+\item \(24\)
+\item \(25\)
+\item \(50\)
+\item No maximum exists
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Answer Key}
+
+\begin{center}
+\begin{tabular}{|c|c||c|c|}
+\hline
+\textbf{Question} & \textbf{Answer} &
+\textbf{Question} & \textbf{Answer}\\
+\hline
+1 & A & 9 & C\\
+2 & C & 10 & D\\
+3 & D & 11 & B\\
+4 & C & 12 & D\\
+5 & E & 13 & E\\
+6 & F & 14 & B\\
+7 & B & 15 & E\\
+8 & B & 16 & D\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\noindent
+\textbf{Scoring rule:}
+\[
+\text{Score}=
+\begin{cases}
+1, & \text{if the selected choice is correct},\\
+0, & \text{if the selected choice is incorrect}.
+\end{cases}
+\]
+
+\printbibliography
+\end{document}
