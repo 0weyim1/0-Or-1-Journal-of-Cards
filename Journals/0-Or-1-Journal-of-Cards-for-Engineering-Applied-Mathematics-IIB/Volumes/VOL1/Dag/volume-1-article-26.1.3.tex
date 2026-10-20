@@ -1,0 +1,899 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1in,left=1in,includefoot]{geometry}
+\usepackage[margin=1in,left=1in,includefoot]{geometry}
+\usepackage{multicol}
+\usepackage[tbtags]{amsmath}%%%%%https://tex.stackexchange.com/questions/368353/using-equation-split-how-can-i-ensure-that-only-the-last-equation-is-numbered%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+ \usepackage{amsmath}
+ \usepackage{amsfonts}
+ \usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\everymath{\displaystyle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}%%palatino font for text
+\usepackage[euler-digits,euler-hat-accent]{eulervm}%euler for math font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ragged2e}%%%%%%%%%%%%%%for \justify
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xcolor}
+\usepackage{booktabs,tabularx}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{graphicx} % Required for including images
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks=true]{hyperref}%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mystyle}%                % Name
+  {}%                                     % Space above
+  {}%                                     % Space below
+  {\itshape}%                             % Body font
+  {}%                                     % Indent amount
+  {\bfseries}%                            % Theorem head font
+  {.}%                                    % Punctuation after theorem head
+  { }%                                    % Space after theorem head, ' ', or \newline
+  {}%                                     % Theorem head spec (can be left empty, meaning `normal')
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{solution}{Solution}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
+\numberwithin{theorem}{section}
+\numberwithin{proposition}{section}
+\numberwithin{example}{section}
+\numberwithin{remark}{section}
+\numberwithin{lemma}{section}
+\numberwithin{corollary}{section}
+\numberwithin{definition}{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[shortlabels]{enumitem}
+\usepackage{soul}%%for highlighting texts and equations begin inside $$..\hl{some text here}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}%%to highlight math equations which is inside \begin{equation}...\end{equation}
+\usepackage{authblk}
+\title{
+{\large Engineering Applied Mathematics IIB for Two Players with Six Number of Jester Cards on Differential Calculus of Function of Several Variables--Level 3}
+}
+\author[$~$]{\small Dagnachew Jenber}
+%\author[3,$*$]{Habtu Zegeye}
+%\author[1]{Mollalgn Haile Takele}
+%\author[4]{Abebe Regassa Tufa}
+% \affil[1]{ Department of Mathematics, Bahir Dar University, Bahir Dar, Ethiopia.}
+\affil[$~$]{Department of Mathematics, Addis Ababa Science and Technology University, Addis Ababa, Ethiopia.}
+%\affil[3]{Department of Mathematics, Botswana International University of Science and Technology, Private Bag 16, Palapye, Botswana.}
+%\affil[4]{Department of Mathematics, University of Botswana, Private Bag 00704 Gaborone, Botswana.}
+% \affil[$*$]{Corresponding author: Dagnachew Jenber, dagnachew.Jenber@aastu.edu.et}
+%\date{}                     %% if you don't need date to appear
+\setcounter{Maxaffil}{0}
+\renewcommand\Affilfont{\itshape\small}
+\usepackage{xhfill}
+\setlength{\parindent}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=bibtex,maxnames=1000,minnames=10,maxalphanames=1000,
+minalphanames=10,style=numeric,sorting=anyt,firstinits=true]{biblatex}
+\DeclareNameAlias{default}{last-first}
+\addbibresource{volume-1-article-26.1.3.bib}
+\renewbibmacro{in:}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[tbtags]{amsmath}%%%%%https://tex.stackexchange.com/questions/368353/using-equation-split-how-can-i-ensure-that-only-the-last-equation-is-numbered%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\makeatletter         
+\def\@maketitle{
+\raggedright
+%\setlength{\columnseprule}{-10cm} % Adds a vertical rule between columns
+\begin{multicols}{2}
+\vfill\null\columnbreak
+0 or 1 Journal of Cards for Engineering Applied Mathematics IIB\\
+Volume 1(2026), Issue 1, pages 1-14\\
+\end{multicols}
+\begin{center}
+{\large \bfseries \sffamily \@title }\\[1.5ex]
+{  \@author}\\[8ex]
+\end{center}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+\makeatletter
+\renewcommand\tableofcontents{%
+  \null\hfill\textbf{\Large\contentsname}\hfill\null\par
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \@starttoc{toc}%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\fontfamily{kpfonts}
+\hypersetup{
+  colorlinks,
+  citecolor=red,
+  linkcolor=red,
+  urlcolor=blue}
+
+  \hypersetup{
+  citebordercolor=red,
+  filebordercolor=red,
+  linkbordercolor=blue
+}
+\centering
+{\bf Abstract}
+\justify
+This work presents 16 number of cards from applied mathematics IIB degree level mainly focused on differential calculus of function of several variables.   The jester cards are A, B, C, D, E and F.
+%\justify
+\renewcommand{\thefootnote}{}%remove numbering for the footnote
+\footnotetext{\scriptsize \textcopyright\ The Author(s) 2025. Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives
+4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modiﬁed the licensed material. You do not have permission under this licence to share adapted material derived
+from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder. To view a copy of this licence, visit \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}.}
+\renewcommand{\thefootnote}{\arabic{footnote}}%%restore default numbering for future footnotes
+
+
+\section{Introduction}
+\label{S:2}
+At present, the decline in the reading community has reached a worrisome level. For many reasons, people have stopped sitting down and reading. For instance, wasting time on useless social media and in trivial places are among the many minor reasons. In 2025, Jenber proposed a solution to this through a major share company established under the title "Zero or One Trading Share Company." This share company believes that the problem mentioned above can be solved in the following ways. We found the solution included in this writing to be convincing (for more information, see the foundation document of 0 or 1 game \cite{ZOOTSC}). The solution presented by this share company is briefly summarized below:
+\begin{enumerate}\item[(1)] Making reading or studying entertaining, profitable, and rewarding. One of the methods for studying or acquiring new knowledge is understanding things by associating them with their equivalents. For example, an English word has many synonyms. Trying to memorize them by associating them is considered one of the best methods. However, to make this exercise unforgettable, doing it in the form of a game while having fun and discussing in groups makes it preferable.There are scientific studies conducted around studying English vocabulary by preparing cards (for example, see \cite{aslan2011teaching,azabdaftari2012comparing,bryson2012using,kosim2013improving,nikoopour2014vocabulary,nugroho2012improving,saputri2017improving,senzaki2017reinventing,sitompul2013teaching,wahyuni2014flashcards}).
+\item[(2)] Understanding things by associating them according to their types stimulates thinking, makes one inquisitive, sparks discussions with friends, and even drives one to search for reference books. And when done this way, it takes a much longer time to forget that thing.
+\item[(3)] Furthermore, if this association is done enjoyably in the form of a game with friends, and if a bonus/reward is given to the winner to encourage knowledge and learning, the game will become popular.
+\item[(4)] Developing various types of entertaining games to execute the solutions mentioned in 1-3 above.
+\end{enumerate}
+In this paper, we have prepared cards for the 0 or 1 game. We have briefly described the number of cards we prepared as follows. Let the number of jester cards be $6$ and the number of players be $k = 2$. Therefore, the total number of cards, $n = 8 \times 2 + 6 = 22$. Thus, including the jester cards, there are a total of $22$ cards. The player cards will be $22 - 6 = 16$ cards; $16$ is a multiple of $8$ (for more information, see the 0 or 1 game foundation document). The jester cards are A, B, C, D, E and F.
+\section{Preliminary}
+\label{S:2}
+Many engineering systems depend on more than one independent
+variable. For example, temperature may depend on spatial coordinates,
+electric potential may vary with position, and mechanical stress may
+depend on several geometric and physical parameters. Differential
+calculus of functions of several variables provides mathematical tools
+for describing and analyzing such systems.
+
+This paper introduces multivariable functions, limits and continuity,
+partial derivatives, higher-order derivatives, gradients, directional
+derivatives, total differentials, tangent planes, the chain rule,
+implicit differentiation, local extrema, and constrained optimization.
+These topics are fundamental to engineering applications
+\cite{openstax2016}.
+
+\subsection{Functions of Several Variables and Level Curves}
+
+A function of two variables is a mapping
+\[
+f:D\subseteq\mathbb{R}^{2}\longrightarrow\mathbb{R},
+\]
+which assigns a real number \(f(x,y)\) to every point \((x,y)\in D\).
+A level curve is defined by
+\[
+f(x,y)=c,
+\]
+where \(c\) is a constant. It represents points at which the function
+has the same value. For a function of three variables, the equation
+\(f(x,y,z)=c\) defines a level surface \cite{openstax2016}.
+
+\textbf{Engineering example.}
+Suppose the temperature on a plate is
+\[
+T(x,y)=120-3x^2-2y^2.
+\]
+The curve corresponding to \(T=90\) satisfies
+\[
+120-3x^2-2y^2=90,
+\]
+so
+\[
+3x^2+2y^2=30.
+\]
+
+\subsection{Limits and Continuity}
+
+The limit of \(f(x,y)\) as \((x,y)\) approaches \((a,b)\) is \(L\)
+if \(f(x,y)\) approaches \(L\) along every possible path to
+\((a,b)\). The function is continuous at \((a,b)\) if
+\[
+\lim_{(x,y)\to(a,b)}f(x,y)=f(a,b).
+\]
+A multivariable limit does not exist if two paths to the same point
+produce different limiting values \cite{openstaxlimits}.
+
+\textbf{Example.}
+Consider
+\[
+f(x,y)=\frac{xy}{x^2+y^2},
+\qquad (x,y)\ne(0,0).
+\]
+Along \(y=0\), the function is zero. Along \(y=x\),
+\[
+f(x,x)=\frac{x^2}{2x^2}=\frac12,\qquad x\ne0.
+\]
+Since these two paths give different limits, the limit at the origin
+does not exist.
+
+\subsection{Partial Derivatives and Sensitivity}
+
+A partial derivative measures the rate of change of a function with
+respect to one variable while the other variables are held constant:
+\[
+f_x=\frac{\partial f}{\partial x},
+\qquad
+f_y=\frac{\partial f}{\partial y}.
+\]
+In engineering, partial derivatives can describe the sensitivity
+of cost, power, temperature, or another output to changes in a
+particular input \cite{openstaxpartial}.
+
+\textbf{Example.}
+Let the manufacturing cost be
+\[
+C(x,y)=2x^2+3xy+y^2.
+\]
+Then
+\[
+C_x=4x+3y.
+\]
+At \((2,1)\), the marginal cost with respect to \(x\) is
+\[
+C_x(2,1)=4(2)+3(1)=11.
+\]
+
+\subsection{Higher-Order Partial Derivatives}
+
+Higher-order partial derivatives are obtained by differentiating
+first-order partial derivatives. For example,
+\[
+f_{xx}=\frac{\partial^2 f}{\partial x^2},
+\qquad
+f_{xy}=\frac{\partial^2 f}{\partial y\,\partial x}.
+\]
+If the relevant second partial derivatives are continuous in a
+neighborhood, then the mixed partial derivatives are equal:
+\[
+f_{xy}=f_{yx}.
+\]
+
+\textbf{Example.}
+For
+\[
+f(x,y)=x^2y^3,
+\]
+we have
+\[
+f_x=2xy^3,\qquad f_{xy}=6xy^2.
+\]
+
+\subsection{Gradient and Directional Derivative}
+
+The gradient of a differentiable function \(f(x,y)\) is
+\[
+\nabla f(x,y)=\langle f_x(x,y),f_y(x,y)\rangle.
+\]
+For a unit vector \(\mathbf{u}=\langle u_1,u_2\rangle\), the
+directional derivative is
+\[
+D_{\mathbf{u}}f(x,y)=\nabla f(x,y)\cdot\mathbf{u}.
+\]
+The gradient points in the direction of the greatest instantaneous
+increase of the function \cite{openstaxgradient}.
+
+\textbf{Example.}
+For an electric potential
+\[
+V(x,y)=x^2+2xy+3y^2,
+\]
+the gradient is
+\[
+\nabla V(x,y)=\langle 2x+2y,2x+6y\rangle.
+\]
+At \((1,-1)\),
+\[
+\nabla V(1,-1)=\langle 0,-4\rangle.
+\]
+Thus, the direction of greatest increase is
+\(\langle 0,-1\rangle\).
+
+\subsection{Total Differential and Error Estimation}
+
+For a differentiable function \(z=f(x,y)\), the total differential
+is
+\[
+dz=f_x\,dx+f_y\,dy.
+\]
+For sufficiently small changes in the inputs, the output change can
+be approximated by
+\[
+\Delta z\approx dz.
+\]
+
+\textbf{Example.}
+The area of a rectangular plate is \(A=xy\). Therefore,
+\[
+dA=y\,dx+x\,dy.
+\]
+If \(x=2\), \(y=5\), \(dx=0.01\), and \(dy=-0.02\), then
+\[
+dA\approx 5(0.01)+2(-0.02)=0.01.
+\]
+The approximate change in area is \(0.01\ \mathrm{m}^2\).
+
+\subsection{Linear Approximation and Tangent Planes}
+
+For \(z=f(x,y)\), the linear approximation near \((a,b)\) is
+\[
+L(x,y)=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b).
+\]
+The equation \(z=L(x,y)\) describes the tangent plane to the surface
+at \((a,b,f(a,b))\) \cite{openstaxtangent}.
+
+\textbf{Example.}
+Let
+\[
+f(x,y)=\ln(x^2+y^2).
+\]
+At \((1,1)\), \(f(1,1)=\ln2\) and
+\[
+f_x(1,1)=1,\qquad f_y(1,1)=1.
+\]
+Thus,
+\[
+L(x,y)=\ln2+(x-1)+(y-1).
+\]
+For small changes \(dx=0.02\) and \(dy=-0.03\), the estimated
+change is \(df\approx0.02-0.03=-0.01\).
+
+\subsection{Chain Rule}
+
+Suppose \(z=f(x,y)\), with \(x=x(t)\) and \(y=y(t)\). The chain rule
+gives
+\[
+\frac{dz}{dt}
+=f_x\frac{dx}{dt}+f_y\frac{dy}{dt}.
+\]
+It is useful when the inputs to a system change with time
+\cite{openstaxchain}.
+
+\textbf{Example.}
+Let
+\[
+T(x,y)=x^2+3y^2,\qquad x=2t,\qquad y=t-1.
+\]
+Then
+\[
+T(t)=4t^2+3(t-1)^2,
+\]
+and
+\[
+\frac{dT}{dt}=8t+6(t-1).
+\]
+At \(t=2\), the rate of change is \(22\).
+
+\subsection{Implicit Differentiation}
+
+If the variables satisfy an equation \(F(x,y,z)=0\), implicit
+differentiation can be used to find the partial derivatives of
+\(z\). Provided \(F_z\ne0\),
+\[
+\frac{\partial z}{\partial x}=-\frac{F_x}{F_z},
+\qquad
+\frac{\partial z}{\partial y}=-\frac{F_y}{F_z}.
+\]
+
+\textbf{Example.}
+For the spherical surface
+\[
+x^2+y^2+z^2=14,
+\]
+differentiating with respect to \(y\), while holding \(x\) constant,
+gives
+\[
+2y+2z\frac{\partial z}{\partial y}=0.
+\]
+Hence
+\[
+\frac{\partial z}{\partial y}=-\frac{y}{z}.
+\]
+At \((1,2,3)\), this derivative is \(-2/3\).
+
+\subsection{Critical Points and the Second Derivative Test}
+
+For a differentiable function \(f(x,y)\), an interior critical point
+satisfies
+\[
+f_x=0,\qquad f_y=0.
+\]
+For a twice-differentiable function, define
+\[
+D=f_{xx}f_{yy}-(f_{xy})^2.
+\]
+At a critical point:
+\begin{itemize}
+    \item \(D>0\) and \(f_{xx}>0\): strict local minimum.
+    \item \(D>0\) and \(f_{xx}<0\): strict local maximum.
+    \item \(D<0\): saddle point.
+    \item \(D=0\): the test is inconclusive.
+\end{itemize}
+See \cite{openstax2016}.
+
+\textbf{Example.}
+For
+\[
+F(x,y)=3x^2+2xy+2y^2,
+\]
+the origin is a critical point. Also,
+\[
+F_{xx}=6,\quad F_{yy}=4,\quad F_{xy}=2,
+\]
+so
+\[
+D=6(4)-2^2=20>0.
+\]
+Since \(F_{xx}>0\), the origin is a strict local minimum.
+
+\subsection{Constrained Optimization}
+
+Constrained optimization seeks to maximize or minimize a function
+subject to a constraint. For an objective \(f(x,y)\) and a constraint
+\(g(x,y)=c\), the Lagrange multiplier equations are
+\[
+\nabla f=\lambda\nabla g,\qquad g(x,y)=c,
+\]
+at regular constrained extrema.
+
+\textbf{Example.}
+Maximize the rectangular area \(A=xy\) subject to
+\[
+x+2y=12,\qquad x,y\geq0.
+\]
+Writing \(x=12-2y\), we obtain
+\[
+A(y)=12y-2y^2.
+\]
+The maximum occurs at \(y=3\), so \(x=6\) and
+\[
+A_{\max}=18.
+\]
+
+\subsection{Classifying a Critical Point by Its Local Behavior}
+
+The second derivative test may be inconclusive at a critical point.
+One can sometimes classify the point by checking the signs of the
+function along different paths through it.
+
+\textbf{Example.}
+Consider
+\[
+U(x,y)=x^3-3xy^2.
+\]
+The origin is a critical point. Along \(y=0\),
+\[
+U(x,0)=x^3,
+\]
+which takes both positive and negative values arbitrarily close
+to \(x=0\). Therefore, the origin is a saddle point.
+
+
+\section{Jester and Player Cards}
+\label{S:3}
+\subsection{Instructions}
+
+Each question has six answer choices, labelled
+A, B, C, D, E, and F. Exactly one choice is correct
+for each question, and the other five are incorrect.
+
+During each play, a student selects one answer choice.
+A correct selection earns a score of $1$, while an
+incorrect selection earns a score of $0$.
+
+
+\subsection{Jester Cards}
+
+The jester cards contain the texts A, B, C, D, E and F.
+
+\subsection{Player Cards}
+
+\begin{enumerate}[label=\textbf{Question \arabic*.},leftmargin=*]
+
+\item The temperature on a metal plate is
+\[
+T(x,y)=120-3x^2-2y^2.
+\]
+Which equation describes the locations where the temperature is
+\(90^\circ\mathrm{C}\)?
+\begin{enumerate}[label=(\Alph*)]
+\item \(3x^2+2y^2=90\)
+\item \(3x^2+2y^2=30\)
+\item \(x^2+y^2=30\)
+\item \(3x^2-2y^2=30\)
+\item \(3x+2y=30\)
+\item \(3x^2+2y^2=210\)
+\end{enumerate}
+
+\item Consider the normalized interaction model
+\[
+f(x,y)=\frac{xy}{x^2+y^2},\qquad (x,y)\ne(0,0).
+\]
+What can be concluded about \(\lim_{(x,y)\to(0,0)}f(x,y)\)?
+\begin{enumerate}[label=(\Alph*)]
+\item The limit is \(0\).
+\item The limit is \(1\).
+\item The limit is \(\frac12\).
+\item The limit is \(+\infty\).
+\item The limit is \(-\infty\).
+\item The limit does not exist.
+\end{enumerate}
+
+\item The cost of manufacturing \(x\) units of one component and
+\(y\) units of another is
+\[
+C(x,y)=2x^2+3xy+y^2.
+\]
+What is the marginal cost with respect to \(x\) at \((2,1)\)?
+\begin{enumerate}[label=(\Alph*)]
+\item \(7\)
+\item \(8\)
+\item \(10\)
+\item \(11\)
+\item \(12\)
+\item \(15\)
+\end{enumerate}
+
+\item The temperature near a heat source is modeled by
+\[
+T(x,y)=100e^{-x}\cos y.
+\]
+Calculate \(T_{xy}\) at \((0,\pi/6)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(-50\)
+\item \(-100\)
+\item \(0\)
+\item \(25\)
+\item \(50\)
+\item \(100\)
+\end{enumerate}
+
+\item An electric potential is modeled by
+\[
+V(x,y)=x^2+2xy+3y^2.
+\]
+At \((1,-1)\), in which unit direction does the potential increase
+most rapidly?
+\begin{enumerate}[label=(\Alph*)]
+\item \(\langle1,0\rangle\)
+\item \(\left\langle\frac1{\sqrt2},\frac1{\sqrt2}\right\rangle\)
+\item \(\langle0,-1\rangle\)
+\item \(\langle0,1\rangle\)
+\item \(\left\langle\frac1{\sqrt2},-\frac1{\sqrt2}\right\rangle\)
+\item \(\langle-1,0\rangle\)
+\end{enumerate}
+
+\item A scalar field is
+\[
+f(x,y)=x^2y+y^2.
+\]
+Find the directional derivative at \((2,1)\) in the direction
+\[
+\mathbf{u}=\left\langle\frac35,\frac45\right\rangle.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item \(\frac{16}{5}\)
+\item \(\frac{24}{5}\)
+\item \(\frac{28}{5}\)
+\item \(\frac{32}{5}\)
+\item \(\frac{34}{5}\)
+\item \(\frac{36}{5}\)
+\end{enumerate}
+
+\item The area of a rectangular plate is \(A=xy\), where \(x\) and
+\(y\) are measured in metres. If
+\[
+x=2,\quad y=5,\quad dx=0.01,\quad dy=-0.02,
+\]
+what is the approximate change in area using the total differential?
+\begin{enumerate}[label=(\Alph*)]
+\item \(0.01\ \mathrm{m}^2\)
+\item \(0.02\ \mathrm{m}^2\)
+\item \(-0.01\ \mathrm{m}^2\)
+\item \(0.05\ \mathrm{m}^2\)
+\item \(-0.04\ \mathrm{m}^2\)
+\item \(0.10\ \mathrm{m}^2\)
+\end{enumerate}
+
+\item A sensor response is modeled by
+\[
+f(x,y)=\ln(x^2+y^2).
+\]
+Using the linear approximation at \((1,1)\), estimate
+\(f(1.02,0.97)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(\ln2+0.05\)
+\item \(\ln2-0.01\)
+\item \(\ln2+0.01\)
+\item \(\ln2-0.05\)
+\item \(\ln2+0.03\)
+\item \(\ln2-0.03\)
+\end{enumerate}
+
+\item A moving component experiences temperature
+\[
+T(x,y)=x^2+3y^2,
+\qquad x=2t,\qquad y=t-1.
+\]
+What is \(\frac{dT}{dt}\) at \(t=2\)?
+\begin{enumerate}[label=(\Alph*)]
+\item \(14\)
+\item \(16\)
+\item \(18\)
+\item \(20\)
+\item \(22\)
+\item \(24\)
+\end{enumerate}
+
+\item A point moves on the surface
+\[
+x^2+y^2+z^2=14.
+\]
+At \((1,2,3)\), what is \(\frac{\partial z}{\partial y}\), with
+\(x\) held constant?
+\begin{enumerate}[label=(\Alph*)]
+\item \(-1\)
+\item \(-\frac23\)
+\item \(-\frac13\)
+\item \(\frac13\)
+\item \(\frac23\)
+\item \(1\)
+\end{enumerate}
+
+\item Near an equilibrium configuration, a design-performance
+function is modeled by
+\[
+F(x,y)=3x^2+2xy+2y^2.
+\]
+Classify the critical point at the origin.
+\begin{enumerate}[label=(\Alph*)]
+\item Strict local maximum
+\item Saddle point
+\item Strict local minimum
+\item No critical point exists
+\item The second derivative test proves no conclusion
+\item Absolute maximum
+\end{enumerate}
+
+\item The cost of a design is
+\[
+C(x,y)=x^2+2y^2-6x-8y+20.
+\]
+If \(x,y\in\mathbb{R}\), what is the minimum value of \(C\)?
+\begin{enumerate}[label=(\Alph*)]
+\item \(-8\)
+\item \(-3\)
+\item \(0\)
+\item \(2\)
+\item \(3\)
+\item \(20\)
+\end{enumerate}
+
+\item A rectangular design has area \(A=xy\), with \(x,y\geq0\),
+subject to
+\[
+x+2y=12.
+\]
+What is the maximum possible area?
+\begin{enumerate}[label=(\Alph*)]
+\item \(12\)
+\item \(15\)
+\item \(16\)
+\item \(18\)
+\item \(24\)
+\item \(36\)
+\end{enumerate}
+
+\item The volume of a cylindrical tank is
+\[
+V=\pi r^2h.
+\]
+At \(r=3\ \mathrm{m}\) and \(h=10\ \mathrm{m}\), measurement errors
+are \(dr=0.02\ \mathrm{m}\) and \(dh=-0.1\ \mathrm{m}\). Use the
+total differential to estimate the change in volume.
+\begin{enumerate}[label=(\Alph*)]
+\item \(0.3\pi\ \mathrm{m}^3\)
+\item \(0.9\pi\ \mathrm{m}^3\)
+\item \(1.2\pi\ \mathrm{m}^3\)
+\item \(-0.3\pi\ \mathrm{m}^3\)
+\item \(2.1\pi\ \mathrm{m}^3\)
+\item \(-0.9\pi\ \mathrm{m}^3\)
+\end{enumerate}
+
+\item The temperature on a plate is
+\[
+T(x,y)=200-3x^2-y^2.
+\]
+Find the tangent line to the constant-temperature curve at
+\((2,1)\).
+\begin{enumerate}[label=(\Alph*)]
+\item \(6x-y=11\)
+\item \(6x+y=11\)
+\item \(3x+y=7\)
+\item \(x+6y=8\)
+\item \(6x-y=13\)
+\item \(6x+y=13\)
+\end{enumerate}
+
+\item An idealized potential-energy function is
+\[
+U(x,y)=x^3-3xy^2.
+\]
+The origin is a critical point. Which statement correctly
+classifies it?
+\begin{enumerate}[label=(\Alph*)]
+\item Strict local minimum
+\item Strict local maximum
+\item Saddle point
+\item Absolute minimum
+\item Absolute maximum
+\item The origin is not a critical point
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Answer Key and Explanations}
+
+\begin{enumerate}[label=\textbf{Question \arabic*.},leftmargin=*]
+
+\item \textbf{B.}
+\[
+120-3x^2-2y^2=90
+\quad\Longrightarrow\quad
+3x^2+2y^2=30.
+\]
+
+\item \textbf{F.} Along \(y=0\), the function is \(0\), while along
+\(y=x\), it is \(1/2\). Since the path limits differ, the limit
+does not exist.
+
+\item \textbf{D.}
+\[
+C_x=4x+3y,\qquad C_x(2,1)=11.
+\]
+
+\item \textbf{E.}
+\[
+T_x=-100e^{-x}\cos y,\qquad
+T_{xy}=100e^{-x}\sin y.
+\]
+Therefore,
+\[
+T_{xy}(0,\pi/6)=100\sin(\pi/6)=50.
+\]
+
+\item \textbf{C.}
+\[
+\nabla V=\langle2x+2y,2x+6y\rangle,
+\qquad \nabla V(1,-1)=\langle0,-4\rangle.
+\]
+The unit vector in this direction is \(\langle0,-1\rangle\).
+
+\item \textbf{F.}
+\[
+\nabla f=\langle2xy,x^2+2y\rangle,
+\qquad \nabla f(2,1)=\langle4,6\rangle.
+\]
+Hence
+\[
+D_{\mathbf u}f
+=4\left(\frac35\right)+6\left(\frac45\right)
+=\frac{36}{5}.
+\]
+
+\item \textbf{A.}
+\[
+dA=y\,dx+x\,dy
+=5(0.01)+2(-0.02)=0.01\ \mathrm{m}^2.
+\]
+
+\item \textbf{B.}
+The linear approximation is
+\[
+L(x,y)=\ln2+(x-1)+(y-1).
+\]
+Thus
+\[
+L(1.02,0.97)=\ln2+0.02-0.03=\ln2-0.01.
+\]
+
+\item \textbf{E.}
+\[
+T(t)=4t^2+3(t-1)^2,\qquad
+\frac{dT}{dt}=8t+6(t-1).
+\]
+At \(t=2\), the derivative is \(16+6=22\).
+
+\item \textbf{B.}
+Implicit differentiation gives
+\[
+2y+2z\frac{\partial z}{\partial y}=0,
+\qquad
+\frac{\partial z}{\partial y}=-\frac{y}{z}=-\frac23.
+\]
+
+\item \textbf{C.}
+\[
+D=F_{xx}F_{yy}-(F_{xy})^2
+=6(4)-2^2=20>0.
+\]
+Since \(F_{xx}=6>0\), the origin is a strict local minimum.
+
+\item \textbf{E.}
+Completing the squares,
+\[
+C(x,y)=(x-3)^2+2(y-2)^2+3.
+\]
+The minimum value is \(3\), attained at \((3,2)\).
+
+\item \textbf{D.}
+Using \(x=12-2y\),
+\[
+A(y)=12y-2y^2.
+\]
+The maximum occurs at \(y=3\), giving \(x=6\) and \(A=18\).
+
+\item \textbf{A.}
+\[
+dV=2\pi rh\,dr+\pi r^2\,dh.
+\]
+Substituting the measurements,
+\[
+dV=2\pi(3)(10)(0.02)+\pi(3)^2(-0.1)
+=1.2\pi-0.9\pi=0.3\pi\ \mathrm{m}^3.
+\]
+
+\item \textbf{F.}
+The gradient of \(T\) is
+\[
+\nabla T=\langle-6x,-2y\rangle.
+\]
+At \((2,1)\), the tangent line satisfies
+\[
+-12(x-2)-2(y-1)=0,
+\]
+which simplifies to \(6x+y=13\).
+
+\item \textbf{C.}
+Along \(y=0\), \(U(x,0)=x^3\), which takes positive and negative
+values arbitrarily close to \(x=0\). Therefore, the origin is a
+saddle point.
+
+\end{enumerate}
+
+
+\noindent
+\textbf{Scoring rule:}
+\[
+\text{Score}=
+\begin{cases}
+1, & \text{if the selected choice is correct},\\
+0, & \text{if the selected choice is incorrect}.
+\end{cases}
+\]
+
+\printbibliography
+\end{document}
