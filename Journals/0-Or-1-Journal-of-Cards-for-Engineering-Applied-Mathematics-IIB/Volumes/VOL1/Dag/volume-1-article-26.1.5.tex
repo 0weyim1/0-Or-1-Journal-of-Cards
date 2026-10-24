@@ -1,0 +1,714 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1in,left=1in,includefoot]{geometry}
+\usepackage[margin=1in,left=1in,includefoot]{geometry}
+\usepackage{multicol}
+\usepackage[tbtags]{amsmath}%%%%%https://tex.stackexchange.com/questions/368353/using-equation-split-how-can-i-ensure-that-only-the-last-equation-is-numbered%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+ \usepackage{amsmath}
+ \usepackage{amsfonts}
+ \usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\everymath{\displaystyle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}%%palatino font for text
+\usepackage[euler-digits,euler-hat-accent]{eulervm}%euler for math font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ragged2e}%%%%%%%%%%%%%%for \justify
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xcolor}
+\usepackage{booktabs,tabularx}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{graphicx} % Required for including images
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks=true]{hyperref}%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mystyle}%                % Name
+  {}%                                     % Space above
+  {}%                                     % Space below
+  {\itshape}%                             % Body font
+  {}%                                     % Indent amount
+  {\bfseries}%                            % Theorem head font
+  {.}%                                    % Punctuation after theorem head
+  { }%                                    % Space after theorem head, ' ', or \newline
+  {}%                                     % Theorem head spec (can be left empty, meaning `normal')
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{solution}{Solution}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
+\numberwithin{theorem}{section}
+\numberwithin{proposition}{section}
+\numberwithin{example}{section}
+\numberwithin{remark}{section}
+\numberwithin{lemma}{section}
+\numberwithin{corollary}{section}
+\numberwithin{definition}{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[shortlabels]{enumitem}
+\usepackage{soul}%%for highlighting texts and equations begin inside $$..\hl{some text here}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}%%to highlight math equations which is inside \begin{equation}...\end{equation}
+\usepackage{authblk}
+\title{
+{\large Engineering Applied Mathematics IIB for Three Players with Six Number of Jester Cards on Differential Calculus of Function of Several Variables--\href{https://play.0-or-1-games.workers.dev/0-Or-1-Games-for-Engineering-Studies/0-Or-1-Games-for-Engineering-Applied-Mathematics-IIB/0O1GFEAMIIB}{Level 5}}
+}
+\author[$~$]{\small Dagnachew Jenber}
+%\author[3,$*$]{Habtu Zegeye}
+%\author[1]{Mollalgn Haile Takele}
+%\author[4]{Abebe Regassa Tufa}
+% \affil[1]{ Department of Mathematics, Bahir Dar University, Bahir Dar, Ethiopia.}
+\affil[$~$]{Department of Mathematics, Addis Ababa Science and Technology University, Addis Ababa, Ethiopia.}
+%\affil[3]{Department of Mathematics, Botswana International University of Science and Technology, Private Bag 16, Palapye, Botswana.}
+%\affil[4]{Department of Mathematics, University of Botswana, Private Bag 00704 Gaborone, Botswana.}
+% \affil[$*$]{Corresponding author: Dagnachew Jenber, dagnachew.Jenber@aastu.edu.et}
+%\date{}                     %% if you don't need date to appear
+\setcounter{Maxaffil}{0}
+\renewcommand\Affilfont{\itshape\small}
+\usepackage{xhfill}
+\setlength{\parindent}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=bibtex,maxnames=1000,minnames=10,maxalphanames=1000,
+minalphanames=10,style=numeric,sorting=anyt,firstinits=true]{biblatex}
+\DeclareNameAlias{default}{last-first}
+\addbibresource{volume-1-article-26.1.5.bib}
+\renewbibmacro{in:}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[tbtags]{amsmath}%%%%%https://tex.stackexchange.com/questions/368353/using-equation-split-how-can-i-ensure-that-only-the-last-equation-is-numbered%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\makeatletter         
+\def\@maketitle{
+\raggedright
+%\setlength{\columnseprule}{-10cm} % Adds a vertical rule between columns
+\begin{multicols}{2}
+\vfill\null\columnbreak
+0 or 1 Journal of Cards for Engineering Applied Mathematics IIB\\
+Volume 1(2026), Issue 1, pages 1-16\\
+\href{https://0weyim1.github.io/0-Or-1-Journal-of-Cards/Journals/0-Or-1-Journal-of-Cards-for-Engineering-Applied-Mathematics-IIB/Volumes/VOL1/Dag/volume-1-article-26.1.5.html}{https://doi.org/10.5281/zenodo.23613908}
+\end{multicols}
+\begin{center}
+{\large \bfseries \sffamily \@title }\\[1.5ex]
+{  \@author}\\[8ex]
+\end{center}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+\makeatletter
+\renewcommand\tableofcontents{%
+  \null\hfill\textbf{\Large\contentsname}\hfill\null\par
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \@starttoc{toc}%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\fontfamily{kpfonts}
+\hypersetup{
+  colorlinks,
+  citecolor=red,
+  linkcolor=red,
+  urlcolor=blue}
+
+  \hypersetup{
+  citebordercolor=red,
+  filebordercolor=red,
+  linkbordercolor=blue
+}
+\centering
+{\bf Abstract}
+\justify
+This work presents 24 number of cards from applied mathematics IIB degree level mainly focused on differential calculus of function of several variables.   The jester cards are A, B, C, D, E and F.
+%\justify
+\renewcommand{\thefootnote}{}%remove numbering for the footnote
+\footnotetext{\scriptsize \textcopyright\ The Author(s) 2026. Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives
+4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modiﬁed the licensed material. You do not have permission under this licence to share adapted material derived
+from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder. To view a copy of this licence, visit \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}.}
+\renewcommand{\thefootnote}{\arabic{footnote}}%%restore default numbering for future footnotes
+
+
+\section{Introduction}
+\label{S:2}
+At present, the decline in the reading community has reached a worrisome level. For many reasons, people have stopped sitting down and reading. For instance, wasting time on useless social media and in trivial places are among the many minor reasons. In 2025, Jenber proposed a solution to this through a major share company established under the title "Zero or One Trading Share Company." This share company believes that the problem mentioned above can be solved in the following ways. We found the solution included in this writing to be convincing (for more information, see the foundation document of 0 or 1 game \cite{ZOOTSC}). The solution presented by this share company is briefly summarized below:
+\begin{enumerate}\item[(1)] Making reading or studying entertaining, profitable, and rewarding. One of the methods for studying or acquiring new knowledge is understanding things by associating them with their equivalents. For example, an English word has many synonyms. Trying to memorize them by associating them is considered one of the best methods. However, to make this exercise unforgettable, doing it in the form of a game while having fun and discussing in groups makes it preferable.There are scientific studies conducted around studying English vocabulary by preparing cards (for example, see \cite{aslan2011teaching,azabdaftari2012comparing,bryson2012using,kosim2013improving,nikoopour2014vocabulary,nugroho2012improving,saputri2017improving,senzaki2017reinventing,sitompul2013teaching,wahyuni2014flashcards}).
+\item[(2)] Understanding things by associating them according to their types stimulates thinking, makes one inquisitive, sparks discussions with friends, and even drives one to search for reference books. And when done this way, it takes a much longer time to forget that thing.
+\item[(3)] Furthermore, if this association is done enjoyably in the form of a game with friends, and if a bonus/reward is given to the winner to encourage knowledge and learning, the game will become popular.
+\item[(4)] Developing various types of entertaining games to execute the solutions mentioned in 1-3 above.
+\end{enumerate}
+In this paper, we have prepared cards for the 0 or 1 game. We have briefly described the number of cards as follows. Let the number of jester cards be $6$ and the number of players be $k = 3$. Therefore, the total number of cards, $n = 8 \times 3 + 6 = 30$. Thus, including the jester cards, there are a total of $30$ cards. The player cards will be $30 - 6 = 24$ cards; $24$ is a multiple of $8$ (for more information, see the 0 or 1 game foundation document \cite{ZOOTSC}). The jester cards are A, B, C, D, E and F.
+\section{Preliminary}
+\label{S:2}
+Many engineering systems depend on more than one independent
+variable. For example, temperature may depend on spatial coordinates,
+electric potential may vary with position, and mechanical stress may
+depend on several geometric and physical parameters. Differential
+calculus of functions of several variables provides mathematical tools
+for describing and analyzing such systems.
+
+The following concepts introduce the main ideas of differential
+calculus of functions of several variables, with examples related
+to engineering applications. The discussion follows the multivariable
+calculus material in \cite{openstax2016}.
+
+\subsection{Functions of Several Variables and Their Domains}
+
+A function of two variables assigns a real number to each admissible ordered pair $(x,y)$:
+\[
+z=f(x,y).
+\]
+In engineering, such a function may represent temperature, electrical power, mechanical stress, or manufacturing cost as a function of two parameters. The \emph{domain} consists of all input pairs for which the function is defined and, where relevant, physically meaningful.
+
+\textbf{Example.} Consider
+\[
+T(x,y)=\sqrt{36-x^2-4y^2}.
+\]
+For $T$ to be real-valued, the radicand must be nonnegative:
+\[
+36-x^2-4y^2\geq 0.
+\]
+Thus the domain is the elliptical region
+\[
+x^2+4y^2\leq 36.
+\]
+The boundary is included because the square root of zero is defined. See \cite[Section 4.1]{strangherman2016}.
+
+\subsection{Limits and Continuity}
+
+The limit of $f(x,y)$ as $(x,y)$ approaches $(a,b)$ is $L$ if $f(x,y)$ approaches $L$ independently of the path used to approach $(a,b)$. The function is continuous at $(a,b)$ if
+\[
+\lim_{(x,y)\to(a,b)}f(x,y)=f(a,b).
+\]
+Checking one path alone does not prove that a multivariable limit exists. However, two paths giving different limiting values prove that the limit does not exist.
+
+\textbf{Example.} Let
+\[
+f(x,y)=\frac{xy}{x^2+y^2}.
+\]
+Along $y=x$, we have $f(x,x)=\frac12$ for $x\ne0$, whereas along $y=0$, we have $f(x,0)=0$. Since these values differ, the limit at the origin does not exist. See \cite[Section 4.2]{strangherman2016}.
+
+\subsection{Partial Derivatives and Their Engineering Interpretation}
+
+For $z=f(x,y)$, the first-order partial derivatives are
+\[
+f_x=\frac{\partial f}{\partial x},
+\qquad
+f_y=\frac{\partial f}{\partial y}.
+\]
+To calculate $f_x$, treat $y$ as constant; to calculate $f_y$, treat $x$ as constant. These derivatives measure the instantaneous rate of change of the output when one input changes while the other is held fixed.
+
+\textbf{Example.} Electrical power in a simple model is $P(V,I)=VI$. Therefore,
+\[
+\frac{\partial P}{\partial V}=I,
+\qquad
+\frac{\partial P}{\partial I}=V.
+\]
+Higher-order partial derivatives include $f_{xx}$, $f_{yy}$, and mixed derivatives such as $f_{xy}$. If the relevant second partial derivatives are continuous in a neighborhood, then $f_{xy}=f_{yx}$. See \cite[Section 4.3]{strangherman2016}.
+
+\subsection{The Chain Rule for Dependent Variables}
+
+If $z=f(x,y)$, where $x=x(t)$ and $y=y(t)$, then
+\[
+\frac{dz}{dt}
+=\frac{\partial f}{\partial x}\frac{dx}{dt}
++\frac{\partial f}{\partial y}\frac{dy}{dt}.
+\]
+The rule is useful when several quantities change simultaneously with time.
+
+\textbf{Example.} Let
+\[
+z=x^2+3y,\qquad x=t^2+1,\qquad y=2t.
+\]
+At $t=1$, we have $x=2$, $dx/dt=2$, and $dy/dt=2$. Hence
+\[
+\frac{dz}{dt}=2x\frac{dx}{dt}+3\frac{dy}{dt}
+=2(2)(2)+3(2)=14.
+\]
+See \cite[Section 4.5]{strangherman2016}.
+
+\subsection{Tangent Planes and Linear Approximation}
+
+For a differentiable function $z=f(x,y)$, the tangent plane at $(a,b,f(a,b))$ is
+\[
+z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b).
+\]
+Near $(a,b)$, the function can be approximated by
+\[
+f(a+\Delta x,b+\Delta y)
+\approx f(a,b)+f_x(a,b)\Delta x+f_y(a,b)\Delta y.
+\]
+
+\textbf{Example.} The diagonal of a rectangle is
+\[
+d(x,y)=\sqrt{x^2+y^2}.
+\]
+At $(3,4)$, $d=5$ and
+\[
+dd\approx \frac{3}{5}dx+\frac{4}{5}dy.
+\]
+If $dx=0.1$ and $dy=-0.2$, then
+\[
+dd\approx \frac35(0.1)+\frac45(-0.2)=-0.10.
+\]
+Thus the estimated new diagonal is $4.90$. See \cite[Section 4.4]{strangherman2016}.
+
+\subsection{Implicit Differentiation}
+
+For a relation $F(x,y)=0$, if $F_y\ne0$, then locally
+\[
+\frac{dy}{dx}=-\frac{F_x}{F_y}.
+\]
+
+\textbf{Example.} For
+\[
+x^2+xy+y^2=7,
+\]
+implicit differentiation gives
+\[
+2x+y+x\frac{dy}{dx}+2y\frac{dy}{dx}=0,
+\]
+so
+\[
+\frac{dy}{dx}=-\frac{2x+y}{x+2y}.
+\]
+At $(1,2)$, the slope is $-4/5$. See \cite[Section 4.5]{strangherman2016}.
+
+\subsection{Gradient and Directional Derivatives}
+
+The gradient of $f(x,y)$ is
+\[
+\nabla f(x,y)=\bigl(f_x(x,y),f_y(x,y)\bigr).
+\]
+It points in the direction of greatest instantaneous increase of $f$. For a unit vector $\mathbf u=(u_1,u_2)$, the directional derivative is
+\[
+D_{\mathbf u}f=\nabla f\cdot\mathbf u.
+\]
+
+\textbf{Example.} Let $f(x,y)=x^2+y^2$. At $(1,2)$,
+\[
+\nabla f(1,2)=(2,4),
+\qquad
+|\nabla f(1,2)|=2\sqrt5.
+\]
+The maximum directional derivative occurs in the direction $(1,2)/\sqrt5$. See \cite[Section 4.6]{strangherman2016}.
+
+\subsection{Total Differentials and Error Estimation}
+
+For a differentiable function $z=f(x,y)$, the total differential is
+\[
+dz=f_xdx+f_ydy.
+\]
+For small input errors, the differential estimates the resulting output error: $\Delta z\approx dz$.
+
+\textbf{Example.} The volume of a cylinder is $V(r,h)=\pi r^2h$, so
+\[
+dV=2\pi rhdr+\pi r^2dh.
+\]
+This estimates how small errors in radius and height affect the calculated volume. See \cite[Section 4.4]{strangherman2016}.
+
+\subsection{Critical Points and Unconstrained Optimization}
+
+For a differentiable function of two variables, a critical point occurs where
+\[
+f_x=0,\qquad f_y=0.
+\]
+Define
+\[
+D=f_{xx}f_{yy}-(f_{xy})^2.
+\]
+At a critical point:
+\begin{itemize}
+\item If $D>0$ and $f_{xx}>0$, there is a local minimum.
+\item If $D>0$ and $f_{xx}<0$, there is a local maximum.
+\item If $D<0$, there is a saddle point.
+\item If $D=0$, the test is inconclusive.
+\end{itemize}
+
+\textbf{Example.} Consider
+\[
+C(x,y)=x^2+2y^2-4x+8y.
+\]
+Solving $C_x=C_y=0$ gives $(x,y)=(2,-2)$. Since $C_{xx}=2$, $C_{yy}=4$, and $C_{xy}=0$, we have $D=8>0$ and $C_{xx}>0$. Thus the point is a minimum, with
+\[
+C(2,-2)=-12.
+\]
+See \cite[Section 4.7]{strangherman2016}.
+
+\subsection{Constrained Optimization and Lagrange Multipliers}
+
+To optimize $f(x,y)$ subject to $g(x,y)=c$, the Lagrange multiplier method uses
+\[
+\nabla f=\lambda\nabla g,
+\qquad g(x,y)=c.
+\]
+
+\textbf{Example.} A rectangular enclosure has one side along a wall, so fencing is required for only three sides. If $x$ is the depth and $y$ is the length along the wall, then $2x+y=40$. The area is $A=xy$. Substituting $y=40-2x$ gives
+\[
+A(x)=40x-2x^2.
+\]
+Since $A'(x)=40-4x=0$ gives $x=10$, we obtain $y=20$ and maximum area $A=200$ square units. See \cite[Section 4.8]{strangherman2016}.
+
+\section{Jester and Player Cards}
+\label{S:3}
+\subsection{Instructions}
+
+Each question has six answer choices, labelled
+A, B, C, D, E, and F. Exactly one choice is correct
+for each question, and the other five are incorrect.
+
+During each play, a student selects one answer choice.
+A correct selection earns a score of $1$, while an
+incorrect selection earns a score of $0$.
+
+
+\subsection{Jester Cards}
+
+The jester cards contain the texts A, B, C, D, E and F.
+
+\subsection{Player Cards}
+
+\begin{enumerate}[label=\textbf{Question \arabic*.},leftmargin=*]
+
+\item \textbf{Electrical power sensitivity.} The power dissipated by a resistor is $P(V,I)=VI$. At $V=24$ volts and $I=3$ amperes, what is the rate of change of power with respect to current when voltage is constant?
+\begin{enumerate}[label=(\Alph*)]
+\item $3\text{ W/A}$
+\item $8\text{ W/A}$
+\item $12\text{ W/A}$
+\item $24\text{ W/A}$
+\item $27\text{ W/A}$
+\item $72\text{ W/A}$
+\end{enumerate}
+
+\item \textbf{Feasible operating region.} A sensor model is $T(x,y)=\sqrt{36-x^2-4y^2}$. What is the maximum possible value of $|x|$ when $y=2$?
+\begin{enumerate}[label=(\Alph*)]
+\item $2$
+\item $2\sqrt2$
+\item $2\sqrt3$
+\item $4$
+\item $2\sqrt5$
+\item $6$
+\end{enumerate}
+
+\item \textbf{Path-dependent limit.} Let
+\[
+F(x,y)=\frac{x^2y}{x^4+y^2}.
+\]
+What can be concluded about $\displaystyle\lim_{(x,y)\to(0,0)}F(x,y)$?
+\begin{enumerate}[label=(\Alph*)]
+\item The limit is $0$.
+\item The limit is $1$.
+\item The limit is $\frac12$.
+\item The limit is $-1$.
+\item The limit is $+\infty$.
+\item The limit does not exist.
+\end{enumerate}
+
+\item \textbf{Continuity of a signal model.} Let
+\[
+S(x,y)=
+\begin{cases}
+\dfrac{\sin(xy)}{xy},&xy\ne0,\\[4pt]
+1,&xy=0.
+\end{cases}
+\]
+Which statement is correct?
+\begin{enumerate}[label=(\Alph*)]
+\item $S$ is discontinuous at every point where $x=0$.
+\item $S$ is continuous everywhere in $\mathbb R^2$.
+\item $S$ is continuous only when $x=y$.
+\item $S$ is discontinuous at the origin but continuous elsewhere.
+\item $S$ is undefined whenever $xy=0$.
+\item $S$ is continuous only when $xy\ne0$.
+\end{enumerate}
+
+\item \textbf{Sensitivity of a mechanical response.} Let $R(x,y)=x^2y+y^3$. At $(2,-1)$, what is the rate of change of $R$ with respect to $x$, holding $y$ constant?
+\begin{enumerate}[label=(\Alph*)]
+\item $-8$
+\item $-6$
+\item $-4$
+\item $-2$
+\item $2$
+\item $4$
+\end{enumerate}
+
+\item \textbf{Mixed partial derivatives.} Let $T(x,y)=e^{xy}$. What is $T_{xy}(0,1)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $e$
+\item $2$
+\item $1$
+\item $1+e$
+\item $-1$
+\end{enumerate}
+
+\item \textbf{Rate of change in a moving system.} Let
+\[
+z=x^2+3y,\qquad x=t^2+1,\qquad y=2t.
+\]
+What is $dz/dt$ at $t=1$?
+\begin{enumerate}[label=(\Alph*)]
+\item $6$
+\item $8$
+\item $10$
+\item $12$
+\item $14$
+\item $16$
+\end{enumerate}
+
+\item \textbf{Tangent-plane approximation.} Let $z=\ln(x+2y)$. Which equation is the tangent plane at $(1,1,\ln3)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $\displaystyle z=\ln3+\frac{x-1}{3}+\frac{2(y-1)}{3}$
+\item $\displaystyle z=\ln3+\frac{2(x-1)}{3}+\frac{y-1}{3}$
+\item $\displaystyle z=\ln3+(x-1)+2(y-1)$
+\item $\displaystyle z=\ln3-\frac{x-1}{3}-\frac{2(y-1)}{3}$
+\item $\displaystyle z=\ln3+\frac{x+y-2}{3}$
+\item $\displaystyle z=\ln3+\frac{x-1}{2}+\frac{y-1}{2}$
+\end{enumerate}
+
+\item \textbf{Estimating a measured diagonal.} Let $d(x,y)=\sqrt{x^2+y^2}$. Initially, $x=3$ cm and $y=4$ cm. If $x$ increases by $0.1$ cm and $y$ decreases by $0.2$ cm, what is the linear approximation of the new diagonal?
+\begin{enumerate}[label=(\Alph*)]
+\item $4.80\text{ cm}$
+\item $4.90\text{ cm}$
+\item $5.00\text{ cm}$
+\item $5.02\text{ cm}$
+\item $5.10\text{ cm}$
+\item $5.20\text{ cm}$
+\end{enumerate}
+
+\item \textbf{Implicit differentiation of a constraint.} The curve $x^2+xy+y^2=7$ passes through $(1,2)$. What is the slope $dy/dx$ there?
+\begin{enumerate}[label=(\Alph*)]
+\item $-\frac54$
+\item $-1$
+\item $-\frac45$
+\item $-\frac25$
+\item $\frac45$
+\item $\frac54$
+\end{enumerate}
+
+\item \textbf{Maximum directional rate of change.} Let $f(x,y)=x^2y$. What is the maximum directional derivative at $(1,2)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $1$
+\item $2$
+\item $4$
+\item $4\sqrt2$
+\item $5$
+\item $\sqrt{17}$
+\end{enumerate}
+
+\item \textbf{Directional derivative of a potential field.} Let $\phi(x,y)=\ln(x^2+y^2)$. At $(1,1)$, determine the directional derivative in the direction from the origin toward $(1,1)$.
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $1$
+\item $\sqrt2$
+\item $2$
+\item $2\sqrt2$
+\item $-\sqrt2$
+\end{enumerate}
+
+\item \textbf{Tangent to a contour curve.} A contour curve is defined by $x^2+3y^2=4$. What is the slope of the tangent line at $(1,1)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $-3$
+\item $-2$
+\item $-\frac13$
+\item $\frac13$
+\item $1$
+\item $3$
+\end{enumerate}
+
+\item \textbf{Temperature change along a trajectory.} Let $T(x,y)=80-x^2-2y^2$. A particle passes through $(2,1)$ with velocity vector $\mathbf v=(3,-1)$. What is the instantaneous rate of change of temperature experienced by the particle?
+\begin{enumerate}[label=(\Alph*)]
+\item $-16$
+\item $-12$
+\item $-8$
+\item $-4$
+\item $4$
+\item $8$
+\end{enumerate}
+
+\item \textbf{Error propagation in a cylinder.} The volume of a cylinder is $V=\pi r^2h$. At $r=2$ cm and $h=10$ cm, the radius increases by $0.01$ cm, while the height decreases by $0.05$ cm. Using the total differential, estimate the change in volume.
+\begin{enumerate}[label=(\Alph*)]
+\item $-0.2\pi\text{ cm}^3$
+\item $0\text{ cm}^3$
+\item $0.1\pi\text{ cm}^3$
+\item $0.2\pi\text{ cm}^3$
+\item $0.4\pi\text{ cm}^3$
+\item $0.6\pi\text{ cm}^3$
+\end{enumerate}
+
+\item \textbf{Error in a calculated measurement.} Let $Q(x,y)=xy^2$. At $x=2$ and $y=3$, suppose $dx=0.01$ and $dy=-0.02$. What is the approximate change $dQ$?
+\begin{enumerate}[label=(\Alph*)]
+\item $-0.33$
+\item $-0.24$
+\item $-0.15$
+\item $-0.09$
+\item $0.15$
+\item $0.24$
+\end{enumerate}
+
+\item \textbf{Rate of decay of concentration.} Let $C(x,t)=10e^{-0.2t}\cos x$. What is the rate of change of concentration with respect to time at $x=\pi/3$ and $t=0$?
+\begin{enumerate}[label=(\Alph*)]
+\item $-2$
+\item $-1$
+\item $-0.5$
+\item $0$
+\item $0.5$
+\item $1$
+\end{enumerate}
+
+\item \textbf{Minimizing a cost function.} Let $C(x,y)=x^2+2y^2-4x+8y$. For unrestricted real $x$ and $y$, what is the minimum value of $C$?
+\begin{enumerate}[label=(\Alph*)]
+\item $-16$
+\item $-14$
+\item $-12$
+\item $-10$
+\item $-8$
+\item $0$
+\end{enumerate}
+
+\item \textbf{Classifying a critical point.} Let $U(x,y)=x^2-4y^2$. What type of critical point occurs at the origin?
+\begin{enumerate}[label=(\Alph*)]
+\item Strict local minimum
+\item Strict local maximum
+\item Saddle point
+\item Neither a critical point nor a stationary point
+\item A flat region of global minima
+\item A point where the function is undefined
+\end{enumerate}
+
+\item \textbf{Optimizing a rectangular enclosure.} A rectangular enclosure is built beside a straight wall, so fencing is needed for only three sides. There are $40$ metres of fencing available. What is the maximum possible enclosed area?
+\begin{enumerate}[label=(\Alph*)]
+\item $100\text{ m}^2$
+\item $150\text{ m}^2$
+\item $180\text{ m}^2$
+\item $196\text{ m}^2$
+\item $200\text{ m}^2$
+\item $400\text{ m}^2$
+\end{enumerate}
+
+\item \textbf{Constrained production optimization.} Let $P(x,y)=x^2y$, where $x>0$, $y>0$, and $x+y=6$. What is the maximum value of $P$?
+\begin{enumerate}[label=(\Alph*)]
+\item $24$
+\item $30$
+\item $32$
+\item $36$
+\item $48$
+\item $64$
+\end{enumerate}
+
+\item \textbf{Finding a minimum operating cost.} Let
+\[
+C(x,y)=x^2+xy+y^2-6x-6y.
+\]
+For unrestricted real $x$ and $y$, at which point does the cost attain its minimum?
+\begin{enumerate}[label=(\Alph*)]
+\item $(1,1)$
+\item $(2,2)$
+\item $(3,3)$
+\item $(0,3)$
+\item $(3,0)$
+\item $(2,-2)$
+\end{enumerate}
+
+\item \textbf{Continuity of a vibration model.} Let
+\[
+g(x,y)=
+\begin{cases}
+(x^2+y^2)\sin \left(\dfrac{1}{\sqrt{x^2+y^2}}\right),
+& (x,y)\ne(0,0),\\[6pt]
+0,&(x,y)=(0,0).
+\end{cases}
+\]
+What is $\displaystyle\lim_{(x,y)\to(0,0)}g(x,y)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $-1$
+\item $0$
+\item $1$
+\item The limit does not exist.
+\item $+\infty$
+\item $-\infty$
+\end{enumerate}
+
+\item \textbf{Tangent plane to a spherical surface.} A sphere is described by $x^2+y^2+z^2=14$. Which equation is the tangent plane at $(1,2,3)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $x+2y+3z=7$
+\item $2x+4y+6z=7$
+\item $x+y+z=6$
+\item $x+2y+3z=14$
+\item $x+2y+3z=6$
+\item $2x+y+3z=14$
+\end{enumerate}
+
+\end{enumerate}
+
+
+\noindent
+\textbf{Scoring rule:}
+\[
+\text{Score}=
+\begin{cases}
+1, & \text{if the selected choice is correct},\\
+0, & \text{if the selected choice is incorrect}.
+\end{cases}
+\]
+\subsection{Answer Key}
+%================================================
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|}
+\textbf{Question} & \textbf{Answer} & \textbf{Main concept}\\
+\hline
+1 & D & Partial derivatives\\
+2 & E & Domain of a function\\
+3 & F & Multivariable limits\\
+4 & B & Continuity\\
+5 & C & Partial derivatives\\
+6 & D & Mixed partial derivatives\\
+7 & E & Chain rule\\
+8 & A & Tangent plane\\
+9 & B & Linear approximation\\
+10 & C & Implicit differentiation\\
+11 & F & Gradient magnitude\\
+12 & C & Directional derivative\\
+13 & C & Tangent to a level curve\\
+14 & C & Chain rule along a trajectory\\
+15 & D & Total differential\\
+16 & C & Error estimation\\
+17 & B & Partial derivative with respect to time\\
+18 & C & Unconstrained minimization\\
+19 & C & Saddle point\\
+20 & E & Constrained optimization\\
+21 & C & Constrained optimization\\
+22 & B & Minimum cost\\
+23 & B & Limit and continuity\\
+24 & D & Tangent plane to an implicit surface\\
+\hline
+\end{tabular}
+\end{center}
+\printbibliography
+\end{document}
